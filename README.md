@@ -97,6 +97,7 @@ tests/                  Playwright tests
 - Hero text: `src/data/site.ts`
 - Booking email: `src/data/site.ts`
 - Social links: `src/data/site.ts`
+- SoundCloud embed + spotlights: `src/data/site.ts`
 - Artist bio / about copy: `src/data/site.ts`
 - Release info: `src/data/releases.ts`
 - Tour dates: `src/data/shows.ts`

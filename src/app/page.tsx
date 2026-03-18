@@ -3,18 +3,14 @@ import Image from "next/image";
 import { ButtonLink } from "@/components/button-link";
 import { GalleryGrid } from "@/components/gallery-grid";
 import { NewsletterForm } from "@/components/newsletter-form";
-import { ReleaseGrid } from "@/components/release-grid";
 import { Reveal } from "@/components/reveal";
 import { SectionShell } from "@/components/section-shell";
 import { ShowsPanel } from "@/components/shows-panel";
 import { galleryItems } from "@/data/gallery";
-import { releases } from "@/data/releases";
 import { shows } from "@/data/shows";
 import { siteConfig, socials } from "@/data/site";
 
 export default function HomePage() {
-  const latestRelease = releases[0];
-
   return (
     <>
       <section className="relative overflow-hidden border-b border-white/10 pt-28">
@@ -81,85 +77,39 @@ export default function HomePage() {
       </section>
 
       <SectionShell
-        description="A premium release section now populated from the current public Spotify catalog instead of placeholder cards."
-        eyebrow="Latest Release"
-        title="Current signal, cleanly framed."
+        description={siteConfig.soundcloud.description}
+        eyebrow="SoundCloud"
+        title="Your live SoundCloud spotlight, straight from the profile."
       >
         <Reveal>
-          <div className="grid gap-6 lg:grid-cols-[minmax(0,1.1fr)_minmax(0,0.9fr)]">
-            <article className="panel-glow grid overflow-hidden lg:grid-cols-[minmax(0,0.9fr)_minmax(0,1.1fr)]">
-              <div className="relative min-h-[320px]">
-                <Image
-                  alt={latestRelease.title}
-                  className="object-cover"
-                  fill
-                  sizes="(min-width: 1024px) 30vw, 100vw"
-                  src={latestRelease.artwork}
-                />
-                <div className="absolute inset-0 bg-[linear-gradient(180deg,_rgba(0,0,0,0.02),_rgba(4,7,12,0.3))]" />
-              </div>
-              <div className="flex flex-col justify-between p-6">
-                <div>
-                  <p className="eyebrow mb-2">Latest Spotify Release</p>
-                  <h3 className="font-display text-5xl text-white">{latestRelease.title}</h3>
-                  <p className="mt-4 text-base leading-8 text-white/68">{latestRelease.description}</p>
-                </div>
-                <div className="mt-8 flex flex-wrap gap-3">
-                  <ButtonLink href="/music">Open Music Page</ButtonLink>
-                </div>
-              </div>
-            </article>
-            <div className="panel-glow p-6">
-              <p className="eyebrow mb-3">Release Stack</p>
-              <div className="space-y-4">
-                {releases.map((release) => (
-                  <div className="rounded-[1.4rem] border border-white/8 bg-white/[0.03] p-4" key={release.slug}>
-                    <div className="flex items-center justify-between gap-4">
-                      <div>
-                        <h3 className="font-display text-2xl text-white">{release.title}</h3>
-                        <p className="mt-2 text-sm text-white/55">{release.date}</p>
-                      </div>
-                      <span className="rounded-full border border-white/10 px-3 py-1 text-[0.68rem] uppercase tracking-[0.18em] text-cyan-200">
-                        {release.status}
-                      </span>
-                    </div>
-                    <p className="mt-3 text-sm leading-7 text-white/62">{release.description}</p>
-                  </div>
-                ))}
-              </div>
-            </div>
-          </div>
-        </Reveal>
-      </SectionShell>
-
-      <SectionShell
-        description="The current site features a YouTube mix embed. This local-first redesign turns it into a more polished showcase block."
-        eyebrow="Featured Mix"
-        title="One embedded set, treated like a headline asset."
-      >
-        <Reveal>
-          <div className="grid gap-6 lg:grid-cols-[minmax(0,0.56fr)_minmax(0,0.44fr)]">
+          <div className="grid gap-6 lg:grid-cols-[minmax(0,0.68fr)_minmax(0,0.32fr)]">
             <div className="panel-glow overflow-hidden">
-              <div className="relative aspect-video">
+              <div className="relative min-h-[460px]">
                 <iframe
-                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                  allowFullScreen
+                  allow="autoplay"
                   className="h-full w-full"
-                  src="https://www.youtube.com/embed/gMijFXfiig0"
-                  title="Geminox featured mix"
+                  loading="lazy"
+                  src={siteConfig.soundcloud.embedUrl}
+                  title={siteConfig.soundcloud.embedTitle}
                 />
               </div>
             </div>
             <div className="panel-glow flex flex-col justify-between p-6">
               <div>
-                <p className="eyebrow mb-2">Live Sets</p>
-                <h3 className="font-display text-4xl text-white">Current featured mix</h3>
+                <p className="eyebrow mb-2">Profile Spotlight</p>
+                <h3 className="font-display text-4xl text-white">Manage featured picks on SoundCloud, not in the site.</h3>
                 <p className="mt-4 text-base leading-8 text-white/68">
-                  The existing site references a “Happy summer day party mix.” This redesign frames that mix as a premium discovery section with stronger hierarchy and cleaner embed treatment.
+                  This section now pulls from the public Geminox SoundCloud profile embed. When you update your Spotlight on SoundCloud, this homepage section should reflect that profile-level curation without needing website edits.
+                </p>
+                <p className="mt-4 text-sm leading-7 text-cyan-100/72">
+                  If you want different tracks featured here later, change the Spotlight on SoundCloud instead of editing the website.
                 </p>
               </div>
               <div className="mt-8 flex flex-wrap gap-3">
-                <ButtonLink href="https://www.youtube.com/@geminox_beats">Watch on YouTube</ButtonLink>
+                <ButtonLink href={siteConfig.soundcloud.profileUrl}>Open SoundCloud</ButtonLink>
+                <ButtonLink href="/music" variant="ghost">
+                  Browse Releases
+                </ButtonLink>
               </div>
             </div>
           </div>

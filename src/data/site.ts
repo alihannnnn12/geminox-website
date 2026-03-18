@@ -68,6 +68,14 @@ export const siteConfig = {
     integrationNote:
       "Replace src/app/api/newsletter/route.ts with your real provider integration when ready."
   },
+  soundcloud: {
+    profileUrl: "https://soundcloud.com/geminox_beats",
+    embedUrl:
+      "https://w.soundcloud.com/player/?url=https%3A//soundcloud.com/geminox_beats&color=%2306b6d4&auto_play=false&hide_related=false&show_comments=false&show_user=true&show_reposts=false&show_teaser=true&visual=true",
+    embedTitle: "Geminox on SoundCloud",
+    description:
+      "The homepage now embeds the public Geminox SoundCloud profile directly so your live SoundCloud Spotlight controls what gets featured here."
+  },
   contact: {
     promoterCopy:
       "Open for club nights, direct support, label showcases, warehouse events, and curated late-night bookings.",
