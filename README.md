@@ -170,63 +170,56 @@ The first local run may take a little longer because Next.js prepares the app an
 
 This is the recommended path for this Next.js project.
 
-### 1. Push this project to GitHub
+### Current Live Setup
 
-If this folder is not already a Git repository:
+- GitHub repo: `https://github.com/alihannnnn12/geminox-website`
+- Vercel project: `geminox-website`
+- Vercel production deployment URL: `https://geminox-website-c3yuys8y2-driftkingteam-8827s-projects.vercel.app`
+
+Note: the raw `vercel.app` deployment is currently protected behind Vercel authentication. Your custom domain will be public once DNS is connected.
+
+### 1. Push future changes to GitHub
+
+From this project folder:
 
 ```bash
 cd /Users/alihan/Downloads/website
-git init
 git add .
-git commit -m "Initial Geminox site"
-git branch -M main
-git remote add origin https://github.com/YOUR-USERNAME/YOUR-REPO.git
-git push -u origin main
+git commit -m "Describe your change"
+git push
 ```
 
-If Git asks for your identity first:
+### 2. One-time Vercel dashboard step for GitHub auto deploys
 
-```bash
-git config --global user.name "Your Name"
-git config --global user.email "you@example.com"
-```
+This project is already deployed on Vercel, but GitHub auto deploys are not connected yet because the Vercel account still needs a GitHub Login Connection.
 
-### 2. Import the GitHub repo into Vercel
+In Vercel:
 
-1. Log in to Vercel.
-2. Click `New Project`.
-3. Select your GitHub repository.
-4. Keep the detected `Next.js` framework preset.
-5. Keep the root directory as the repository root.
-6. Click `Deploy`.
+1. Log in to your account.
+2. Open `Account Settings`.
+3. Open `Login Connections`.
+4. Connect `GitHub`.
+5. Go back to the `geminox-website` project.
+6. Open `Settings` -> `Git`.
+7. Connect the repository `alihannnnn12/geminox-website`.
+
+After that, each push to `main` should create a production deployment automatically.
 
 No environment variables are required for this version of the site.
 
 ### 3. Add your domain in Vercel
 
-Inside Vercel:
+Already added in Vercel:
 
-1. Open the deployed project.
-2. Go to `Settings`.
-3. Open `Domains`.
-4. Add your main domain, for example `geminoxbeats.com`.
-5. Also add `www.geminoxbeats.com`.
-
-Vercel will then show you the exact DNS records it expects.
+- `geminoxbeats.com`
+- `www.geminoxbeats.com`
 
 ### 4. Configure DNS in IONOS
 
-Use the DNS records shown in Vercel for your exact project.
+Use these exact records from the live Vercel project:
 
-Typical setup:
-
-- Apex/root domain: `A` record
-- `www` subdomain: `CNAME` record
-
-Typical values:
-
-- `@` -> `A` -> the IP shown by Vercel
-- `www` -> `CNAME` -> the Vercel host shown by Vercel
+- Root domain: `A` record for `@` pointing to `76.76.21.21`
+- `www` domain: `A` record for `www` pointing to `76.76.21.21`
 
 ### 5. Update DNS in IONOS
 
@@ -236,8 +229,22 @@ In IONOS:
 2. Go to `Domains & SSL`.
 3. Open the target domain.
 4. Edit the DNS settings.
-5. Add or update the `A` record for the root domain.
-6. Add or update the `CNAME` record for `www`.
+5. Add or update the `A` record for the root domain:
+
+```text
+Host: @
+Type: A
+Value: 76.76.21.21
+```
+
+6. Add or update the `A` record for `www`:
+
+```text
+Host: www
+Type: A
+Value: 76.76.21.21
+```
+
 7. Save the changes.
 
 If you are using `www`, make sure that no old IONOS website-builder mapping is still attached to that same subdomain.
