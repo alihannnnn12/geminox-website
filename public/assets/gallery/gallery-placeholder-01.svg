@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 1200">
+  <defs>
+    <linearGradient id="a" x1="0%" x2="100%" y1="0%" y2="100%">
+      <stop offset="0%" stop-color="#0A1220" />
+      <stop offset="100%" stop-color="#04070D" />
+    </linearGradient>
+  </defs>
+  <rect width="900" height="1200" fill="url(#a)" />
+  <circle cx="220" cy="210" r="220" fill="#35A1FF" opacity=".14" />
+  <circle cx="700" cy="900" r="260" fill="#132236" opacity=".7" />
+  <path d="M90 825c126-116 248-174 366-174 118 0 252 58 404 174v285H90V825Z" fill="#060A10" opacity=".95" />
+  <text x="82" y="120" fill="#90D1FF" font-family="Arial, sans-serif" font-size="28" letter-spacing="8">REPLACE WITH CLUB PHOTO</text>
+  <text x="82" y="1000" fill="#F7FAFF" font-family="Arial, sans-serif" font-size="82" font-weight="700">WAREHOUSE</text>
+  <text x="82" y="1084" fill="#F7FAFF" font-family="Arial, sans-serif" font-size="82" font-weight="700">PORTRAIT</text>
+</svg>

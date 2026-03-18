@@ -1,0 +1,183 @@
+@import "tailwindcss";
+
+:root {
+  --background: #05080d;
+  --background-soft: #0d121a;
+  --surface: rgba(255, 255, 255, 0.05);
+  --surface-strong: rgba(255, 255, 255, 0.08);
+  --foreground: #f5f7fb;
+  --muted: rgba(245, 247, 251, 0.72);
+  --border: rgba(255, 255, 255, 0.1);
+  --accent: #35a1ff;
+  --accent-soft: rgba(53, 161, 255, 0.16);
+}
+
+@theme inline {
+  --font-display: var(--font-syne);
+  --font-body: var(--font-manrope);
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background:
+    radial-gradient(circle at top, rgba(53, 161, 255, 0.22), transparent 28%),
+    radial-gradient(circle at 80% 15%, rgba(52, 93, 255, 0.14), transparent 22%),
+    linear-gradient(180deg, #060a10 0%, #05080d 40%, #03060a 100%);
+  color: var(--foreground);
+  font-family: var(--font-manrope), sans-serif;
+  min-height: 100vh;
+}
+
+body::before {
+  background-image:
+    linear-gradient(rgba(255, 255, 255, 0.025) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255, 255, 255, 0.025) 1px, transparent 1px);
+  background-position: center center;
+  background-size: 96px 96px;
+  content: "";
+  inset: 0;
+  pointer-events: none;
+  position: fixed;
+}
+
+::selection {
+  background: rgba(53, 161, 255, 0.32);
+  color: white;
+}
+
+@layer base {
+  a {
+    text-decoration: none;
+  }
+
+  button,
+  input,
+  textarea {
+    font: inherit;
+  }
+}
+
+@layer components {
+  .hero-title {
+    font-family: var(--font-syne), sans-serif;
+    font-size: clamp(2.1rem, 6vw, 4.4rem);
+    font-weight: 800;
+    letter-spacing: -0.05em;
+    line-height: 0.92;
+  }
+
+  .section-title {
+    font-family: var(--font-syne), sans-serif;
+    font-size: clamp(2.25rem, 5vw, 4rem);
+    font-weight: 700;
+    letter-spacing: -0.04em;
+    line-height: 1;
+  }
+
+  .section-copy {
+    color: var(--muted);
+    line-height: 1.8;
+    max-width: 44rem;
+  }
+
+  .eyebrow {
+    color: rgba(145, 206, 255, 0.86);
+    font-size: 0.74rem;
+    font-weight: 700;
+    letter-spacing: 0.26em;
+    margin-bottom: 1rem;
+    text-transform: uppercase;
+  }
+
+  .section-wrap {
+    padding-bottom: 5rem;
+    padding-top: 5rem;
+    position: relative;
+  }
+
+  .panel-glow {
+    background:
+      linear-gradient(180deg, rgba(255, 255, 255, 0.08), rgba(255, 255, 255, 0.03)),
+      rgba(8, 12, 18, 0.78);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 1.75rem;
+    box-shadow:
+      0 24px 80px rgba(0, 0, 0, 0.4),
+      inset 0 1px 0 rgba(255, 255, 255, 0.05),
+      0 0 0 1px rgba(53, 161, 255, 0.02);
+    overflow: hidden;
+  }
+
+  .cta-primary,
+  .cta-secondary,
+  .cta-ghost {
+    align-items: center;
+    border-radius: 999px;
+    display: inline-flex;
+    font-size: 0.85rem;
+    font-weight: 700;
+    gap: 0.5rem;
+    justify-content: center;
+    letter-spacing: 0.18em;
+    min-height: 3.25rem;
+    padding: 0 1.35rem;
+    text-transform: uppercase;
+    transition: 180ms ease;
+  }
+
+  .cta-primary {
+    background: linear-gradient(135deg, rgba(53, 161, 255, 1), rgba(23, 115, 255, 0.92));
+    box-shadow: 0 0 40px rgba(53, 161, 255, 0.26);
+    color: white;
+  }
+
+  .cta-secondary {
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.14);
+    color: white;
+  }
+
+  .cta-ghost {
+    color: rgba(255, 255, 255, 0.72);
+  }
+
+  .cta-primary:hover,
+  .cta-secondary:hover,
+  .cta-ghost:hover {
+    transform: translateY(-1px);
+  }
+
+  .form-input {
+    background: rgba(255, 255, 255, 0.04);
+    border: 1px solid rgba(255, 255, 255, 0.12);
+    border-radius: 1rem;
+    color: white;
+    min-height: 3.5rem;
+    padding: 0.95rem 1rem;
+    width: 100%;
+  }
+
+  .form-input::placeholder {
+    color: rgba(255, 255, 255, 0.38);
+  }
+
+  .footer-heading {
+    color: rgba(255, 255, 255, 0.95);
+    font-size: 0.84rem;
+    font-weight: 700;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+  }
+
+  .footer-link {
+    color: rgba(255, 255, 255, 0.7);
+    transition: color 160ms ease;
+  }
+
+  .footer-link:hover {
+    color: white;
+  }
+}

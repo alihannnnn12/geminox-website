@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 1200">
+  <defs>
+    <linearGradient id="a" x1="0%" x2="100%" y1="0%" y2="100%">
+      <stop offset="0%" stop-color="#03070D" />
+      <stop offset="100%" stop-color="#0B1119" />
+    </linearGradient>
+    <radialGradient id="b" cx="72%" cy="20%" r="65%">
+      <stop offset="0%" stop-color="#1C78FF" stop-opacity=".72" />
+      <stop offset="100%" stop-color="#1C78FF" stop-opacity="0" />
+    </radialGradient>
+  </defs>
+  <rect width="1200" height="1200" fill="url(#a)" />
+  <rect width="1200" height="1200" fill="url(#b)" />
+  <rect x="86" y="86" width="1028" height="1028" rx="42" fill="none" opacity=".16" stroke="#8FD1FF" stroke-width="2" />
+  <path d="M120 920c111-109 239-198 384-267 145-68 279-103 403-103 81 0 172 18 273 54V1200H120V920Z" fill="#06111D" opacity=".9" />
+  <text x="88" y="128" fill="#8FD1FF" font-family="Arial, sans-serif" font-size="32" letter-spacing="10">PLACEHOLDER RELEASE</text>
+  <text x="88" y="1010" fill="#F7FAFF" font-family="Arial, sans-serif" font-size="118" font-weight="700">BLUE ROOM</text>
+  <text x="88" y="1110" fill="#F7FAFF" font-family="Arial, sans-serif" font-size="118" font-weight="700">PRESSURE</text>
+</svg>

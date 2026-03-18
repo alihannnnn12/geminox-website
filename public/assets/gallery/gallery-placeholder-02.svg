@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 1200">
+  <rect width="900" height="1200" fill="#05080D" />
+  <circle cx="680" cy="230" r="230" fill="#2B8CFF" opacity=".16" />
+  <path d="M0 490c138-54 287-81 446-81 212 0 363 49 454 147v644H0V490Z" fill="#0A1018" />
+  <path d="M0 780c139-84 291-126 457-126 170 0 318 42 443 126v420H0V780Z" fill="#07131F" />
+  <text x="82" y="120" fill="#90D1FF" font-family="Arial, sans-serif" font-size="28" letter-spacing="8">REPLACE WITH CROWD SHOT</text>
+  <text x="82" y="1000" fill="#F7FAFF" font-family="Arial, sans-serif" font-size="82" font-weight="700">CROWD</text>
+  <text x="82" y="1084" fill="#F7FAFF" font-family="Arial, sans-serif" font-size="82" font-weight="700">ENERGY</text>
+</svg>

@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 1200">
+  <defs>
+    <linearGradient id="a" x1="0%" x2="100%" y1="0%" y2="100%">
+      <stop offset="0%" stop-color="#09101a" />
+      <stop offset="100%" stop-color="#04070d" />
+    </linearGradient>
+    <radialGradient id="b" cx="30%" cy="25%" r="60%">
+      <stop offset="0%" stop-color="#35A1FF" stop-opacity=".75" />
+      <stop offset="100%" stop-color="#35A1FF" stop-opacity="0" />
+    </radialGradient>
+  </defs>
+  <rect width="1200" height="1200" fill="url(#a)" />
+  <rect width="1200" height="1200" fill="url(#b)" />
+  <circle cx="910" cy="240" r="180" fill="#0C1420" opacity=".8" />
+  <circle cx="260" cy="910" r="220" fill="#111D2B" opacity=".9" />
+  <path d="M180 760c160-130 319-194 477-194s272 34 361 101 132 141 132 224v109H50V877c0-41 43-80 130-117Z" fill="#060A10" opacity=".92" />
+  <text x="88" y="128" fill="#8FD1FF" font-family="Arial, sans-serif" font-size="32" letter-spacing="10">PLACEHOLDER RELEASE</text>
+  <text x="88" y="1010" fill="#F7FAFF" font-family="Arial, sans-serif" font-size="118" font-weight="700">AFTERHOURS</text>
+  <text x="88" y="1110" fill="#F7FAFF" font-family="Arial, sans-serif" font-size="118" font-weight="700">CIRCUIT</text>
+</svg>

@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 1200">
+  <rect width="900" height="1200" fill="#05080D" />
+  <path d="M0 300c114-67 243-101 388-101 234 0 405 72 512 217v784H0V300Z" fill="#08101A" />
+  <path d="M0 620c147-84 298-126 454-126 175 0 324 48 446 145v561H0V620Z" fill="#101A2A" opacity=".88" />
+  <circle cx="690" cy="250" r="180" fill="#35A1FF" opacity=".18" />
+  <text x="82" y="120" fill="#90D1FF" font-family="Arial, sans-serif" font-size="28" letter-spacing="8">REPLACE WITH PRESS STILL</text>
+  <text x="82" y="1000" fill="#F7FAFF" font-family="Arial, sans-serif" font-size="82" font-weight="700">PRESS</text>
+  <text x="82" y="1084" fill="#F7FAFF" font-family="Arial, sans-serif" font-size="82" font-weight="700">TEXTURE</text>
+</svg>

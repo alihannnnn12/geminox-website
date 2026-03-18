@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 1200">
+  <rect width="900" height="1200" fill="#04070D" />
+  <rect x="110" y="110" width="680" height="980" rx="30" fill="#09121C" />
+  <circle cx="450" cy="430" r="240" fill="#35A1FF" opacity=".14" />
+  <path d="M170 760c77-52 170-78 280-78 109 0 208 26 298 78v250H170V760Z" fill="#050B12" opacity=".94" />
+  <text x="82" y="120" fill="#90D1FF" font-family="Arial, sans-serif" font-size="28" letter-spacing="8">REPLACE WITH BTS IMAGE</text>
+  <text x="82" y="1000" fill="#F7FAFF" font-family="Arial, sans-serif" font-size="82" font-weight="700">BACKSTAGE</text>
+  <text x="82" y="1084" fill="#F7FAFF" font-family="Arial, sans-serif" font-size="82" font-weight="700">DETAIL</text>
+</svg>
