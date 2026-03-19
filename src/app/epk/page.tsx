@@ -27,7 +27,7 @@ export default function EpkPage() {
       </PageHero>
 
       <SectionShell
-        description="All of these blocks are organized for fast promoter scanning and easy future updates."
+        description="Every block is arranged for fast promoter scanning and a clear first read."
         eyebrow="Facts"
         title="Fast details up front."
       >
@@ -44,7 +44,7 @@ export default function EpkPage() {
       </SectionShell>
 
       <SectionShell
-        description="Use this short bio as a base and tighten it later with venue highlights, support slots, or release milestones."
+        description="A short-form bio that quickly frames the project voice, sound, and booking lane."
         eyebrow="Short Bio"
         title="Concise, elevated positioning."
       >

@@ -14,18 +14,18 @@ export default function MerchPage() {
   return (
     <>
       <PageHero
-        description="A polished holding page that still feels intentional while merch is being prepared."
+        description="A branded merch page designed to hold anticipation without feeling empty."
         eyebrow="Merch"
-        title="Merch is not live yet, but the page still carries weight."
+        title="Merch will land with the right pressure."
       >
         <div className="panel-glow p-6">
           <p className="eyebrow mb-2">Status</p>
-          <p className="text-base leading-8 text-white/70">Merch is being shaped for a future drop, with products, mockups, and store links to follow.</p>
+          <p className="text-base leading-8 text-white/70">The first drop is being shaped around limited-run pieces, tighter graphics, and a cleaner clubwear angle.</p>
         </div>
       </PageHero>
 
       <SectionShell
-        description="This keeps the merch route from feeling empty while giving you a clear future upgrade path."
+        description="The page sets the tone early and gives the eventual drop a place to land with impact."
         eyebrow="Coming Soon"
         title="A cleaner waitlist moment."
       >
@@ -35,13 +35,13 @@ export default function MerchPage() {
               <p className="eyebrow">Future drop</p>
               <h2 className="font-display text-5xl text-white">Capsule pieces, limited-run graphics, and late-night clubwear.</h2>
               <p className="mt-5 max-w-xl text-base leading-8 text-white/68">
-                Use this page for the first merch drop once artwork, sizing, and fulfillment details are ready.
+                Expect a focused capsule of graphics, wearable staples, and pieces that match the darker Geminox identity.
               </p>
             </div>
             <div className="flex flex-col justify-center p-6 lg:p-8">
               <h3 className="font-display text-3xl text-white">Until then, send people to the newsletter.</h3>
               <p className="mt-4 text-base leading-8 text-white/68">
-                That keeps this route useful now and gives the merch launch a built-in audience later.
+                That keeps the signal warm now and gives the first drop a built-in audience when it lands.
               </p>
               <div className="mt-8 flex flex-wrap gap-3">
                 <ButtonLink href="/#newsletter">Join Newsletter</ButtonLink>

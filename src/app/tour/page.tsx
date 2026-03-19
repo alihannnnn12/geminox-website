@@ -10,7 +10,7 @@ export default function TourPage() {
   return (
     <>
       <PageHero
-        description="A polished live page that keeps the calendar clear, direct, and ready for future ticket links."
+        description="A live page that stays clear, direct, and promoter-friendly whether the run is full or between announcements."
         eyebrow="Tour / Shows"
         title="Live dates, cleanly handled whether the calendar is packed or quiet."
       >
@@ -21,7 +21,7 @@ export default function TourPage() {
       </PageHero>
 
       <SectionShell
-        description="When real dates are ready, update `src/data/shows.ts` and the page will populate automatically."
+        description="Every appearance sits in a clean show feed with room for city, venue, and ticket details."
         eyebrow="Show Feed"
         title="Upcoming appearances."
       >

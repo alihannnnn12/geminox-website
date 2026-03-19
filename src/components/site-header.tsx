@@ -39,6 +39,39 @@ function SocialIcon({ label }: { label: string }) {
           <path d="m10.3 9.3 4.5 2.7-4.5 2.7V9.3Z" fill="currentColor" />
         </svg>
       );
+    case "Spotify":
+      return (
+        <svg aria-hidden="true" className={shared} fill="none" viewBox="0 0 24 24">
+          <circle cx="12" cy="12" r="8.2" stroke="currentColor" strokeWidth="1.7" />
+          <path d="M8 10.1c2.7-1 5.7-.8 8.4.6" stroke="currentColor" strokeLinecap="round" strokeWidth="1.7" />
+          <path d="M8.8 13c2.1-.7 4.4-.5 6.3.5" stroke="currentColor" strokeLinecap="round" strokeWidth="1.5" />
+          <path d="M9.6 15.8c1.5-.4 3-.3 4.3.4" stroke="currentColor" strokeLinecap="round" strokeWidth="1.4" />
+        </svg>
+      );
+    case "Apple Music":
+      return (
+        <svg aria-hidden="true" className={shared} fill="none" viewBox="0 0 24 24">
+          <path
+            d="M14.5 6.2v8a2.7 2.7 0 1 1-1.7-2.5V8.3l5-1.1v6.1a2.7 2.7 0 1 1-1.7-2.5V5.4l-1.6.8Z"
+            stroke="currentColor"
+            strokeLinecap="round"
+            strokeLinejoin="round"
+            strokeWidth="1.7"
+          />
+        </svg>
+      );
+    case "SoundCloud":
+      return (
+        <svg aria-hidden="true" className={shared} fill="none" viewBox="0 0 24 24">
+          <path
+            d="M8.4 15.9H19a2.5 2.5 0 0 0 .3-5 4.6 4.6 0 0 0-8.7-1.7 3.5 3.5 0 0 0-2.2-.2v6.9Z"
+            stroke="currentColor"
+            strokeLinejoin="round"
+            strokeWidth="1.6"
+          />
+          <path d="M5 10.4v5.5M6.7 9.8v6.1M3.3 11.4v4.5" stroke="currentColor" strokeLinecap="round" strokeWidth="1.6" />
+        </svg>
+      );
     case "Bookings":
       return (
         <svg aria-hidden="true" className={shared} fill="none" viewBox="0 0 24 24">
@@ -120,18 +153,18 @@ export function SiteHeader() {
           <span className="sr-only">Menu</span>
           <span className="relative block h-5 w-5">
             <span
-              className={`absolute left-1/2 top-1/2 block h-px w-4 -translate-x-1/2 -translate-y-[5px] rounded-full bg-current transition-transform duration-300 ease-[cubic-bezier(0.22,1,0.36,1)] ${
-                open ? "translate-y-0 rotate-45" : ""
+              className={`absolute left-1/2 top-[5px] block h-px w-4 -translate-x-1/2 rounded-full bg-current transition-all duration-300 ease-[cubic-bezier(0.22,1,0.36,1)] ${
+                open ? "top-1/2 -translate-y-1/2 rotate-45" : ""
               }`}
             />
             <span
-              className={`absolute left-1/2 top-1/2 block h-px w-4 -translate-x-1/2 rounded-full bg-current transition-all duration-200 ease-out ${
+              className={`absolute left-1/2 top-1/2 block h-px w-4 -translate-x-1/2 -translate-y-1/2 rounded-full bg-current transition-all duration-200 ease-out ${
                 open ? "opacity-0" : "opacity-100"
               }`}
             />
             <span
-              className={`absolute left-1/2 top-1/2 block h-px w-4 -translate-x-1/2 translate-y-[5px] rounded-full bg-current transition-transform duration-300 ease-[cubic-bezier(0.22,1,0.36,1)] ${
-                open ? "translate-y-0 -rotate-45" : ""
+              className={`absolute bottom-[5px] left-1/2 block h-px w-4 -translate-x-1/2 rounded-full bg-current transition-all duration-300 ease-[cubic-bezier(0.22,1,0.36,1)] ${
+                open ? "bottom-auto top-1/2 -translate-y-1/2 -rotate-45" : ""
               }`}
             />
           </span>

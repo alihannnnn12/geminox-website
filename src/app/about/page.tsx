@@ -20,7 +20,7 @@ export default function AboutPage() {
       </PageHero>
 
       <SectionShell
-        description="This copy is meant to be elevated but still editable. You can tighten the voice further later inside `src/data/site.ts`."
+        description="A sharper read on the project voice, built for clubs, promoters, labels, and listeners who care about direction."
         eyebrow="Artist Statement"
         title="The project in a few clean paragraphs."
       >

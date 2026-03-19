@@ -32,7 +32,7 @@ export function ReleaseGrid({ items }: ReleaseGridProps) {
             <h3 className="mt-3 font-display text-3xl text-white">{release.title}</h3>
             <p className="mt-3 flex-1 text-sm leading-7 text-white/68">{release.description}</p>
             {release.isPlaceholder ? (
-              <p className="mt-4 text-sm text-cyan-100/70">Placeholder entry. Replace content in `src/data/releases.ts`.</p>
+              <p className="mt-4 text-sm text-cyan-100/70">Additional catalog entries can expand here as the release slate grows.</p>
             ) : null}
             <div className="mt-5 flex flex-wrap gap-3">
               {release.links.map((link) =>

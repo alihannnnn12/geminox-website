@@ -30,6 +30,9 @@ export const socials: SocialItem[] = [
   { href: "https://www.instagram.com/geminox_beats/", label: "Instagram" },
   { href: "https://www.tiktok.com/@geminox_beats", label: "TikTok" },
   { href: "https://www.youtube.com/@geminox_beats", label: "YouTube" },
+  { href: "https://open.spotify.com/artist/23sLtEwFbFysRPtji4FMCB", label: "Spotify" },
+  { href: "https://music.apple.com/us/artist/geminox/1779764663", label: "Apple Music" },
+  { href: "https://soundcloud.com/geminox_beats", label: "SoundCloud" },
   { href: "mailto:bookings@geminoxbeats.com", label: "Bookings" }
 ];
 
@@ -52,7 +55,7 @@ export const siteConfig = {
     announcement: {
       label: "Latest signal",
       title: "No Fakers",
-      copy: "New EP announced on the current site for April 3, 2026."
+      copy: "A sharp new Geminox release built for stripped-back pressure and after-hours rooms."
     }
   },
   about: {
@@ -60,7 +63,7 @@ export const siteConfig = {
       "Geminox is a Washington DC-based artist project rooted in underground tech house, focused on hypnotic grooves, club tension, and sleek late-night energy.",
     long: [
       "Built for warehouse systems and intimate rooms alike, the project leans into pressure over spectacle: rolling drums, shadowy basslines, and patient transitions that keep a floor locked without tipping into excess.",
-      "This redesign uses the real signals available on the current site, including the No Fakers EP announcement, the featured mix, booking contact, and active social channels. Any missing assets are clearly marked so the site can launch locally now and be tightened up later."
+      "From Washington DC outward, the project stays centered on control, movement, and atmosphere, pairing sleek production with a darker club sensibility that feels equally at home in direct support slots and late-night warehouse rooms."
     ]
   },
   newsletter: {
@@ -70,11 +73,13 @@ export const siteConfig = {
   },
   soundcloud: {
     profileUrl: "https://soundcloud.com/geminox_beats",
-    embedUrl:
-      "https://w.soundcloud.com/player/?url=https%3A//soundcloud.com/geminox_beats&color=%2306b6d4&auto_play=false&hide_related=false&show_comments=false&show_user=true&show_reposts=false&show_teaser=true&visual=true",
-    embedTitle: "Geminox on SoundCloud",
     description:
-      "The homepage now embeds the public Geminox SoundCloud profile directly so your live SoundCloud Spotlight controls what gets featured here."
+      "Move between the Geminox SoundCloud profile and a selected Spotify playlist without leaving the site."
+  },
+  spotifyPlaylist: {
+    url: "https://open.spotify.com/playlist/6f3CQmny50cDvvPWaEiLSw?si=7e5a193d84f441f3",
+    embedUrl: "https://open.spotify.com/embed/playlist/6f3CQmny50cDvvPWaEiLSw?utm_source=generator&theme=0",
+    embedTitle: "Geminox Spotify playlist"
   },
   contact: {
     promoterCopy:
@@ -96,8 +101,8 @@ export const siteConfig = {
       value: "https://open.spotify.com/artist/23sLtEwFbFysRPtji4FMCB",
       isPlaceholder: false
     },
-    { label: "Apple Music", value: "Add artist URL", isPlaceholder: true },
-    { label: "Beatport", value: "Add artist URL", isPlaceholder: true },
-    { label: "SoundCloud", value: "Add artist URL", isPlaceholder: true }
+    { label: "Apple Music", value: "https://music.apple.com/us/artist/geminox/1779764663", isPlaceholder: false },
+    { label: "Beatport", value: "Catalog link coming into focus", isPlaceholder: true },
+    { label: "SoundCloud", value: "https://soundcloud.com/geminox_beats", isPlaceholder: false }
   ]
 } as const;

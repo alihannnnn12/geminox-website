@@ -129,7 +129,7 @@ Pulled from the current Geminox site:
 
 ## Environment Variables
 
-Newsletter signup now supports Kit.
+Newsletter signup now supports Kit, and the contact form can send directly to your booking inbox over SMTP.
 
 Create a local env file:
 
@@ -142,6 +142,13 @@ Add these values to `.env.local`:
 ```text
 KIT_API_KEY=your_kit_api_key
 KIT_FORM_ID=your_kit_form_id
+SMTP_HOST=smtp.ionos.com
+SMTP_PORT=465
+SMTP_SECURE=true
+SMTP_USER=bookings@geminoxbeats.com
+SMTP_PASS=your_mailbox_password
+CONTACT_TO=bookings@geminoxbeats.com
+CONTACT_FROM=bookings@geminoxbeats.com
 ```
 
 Current provider setup:
@@ -149,6 +156,8 @@ Current provider setup:
 - Newsletter provider: `Kit`
 - Newsletter route: `src/app/api/newsletter/route.ts`
 - Newsletter form component: `src/components/newsletter-form.tsx`
+- Contact form transport: `SMTP`
+- Contact form route: `src/app/api/contact/route.ts`
 
 ## Common Troubleshooting
 
@@ -185,6 +194,28 @@ KIT_FORM_ID=...
 
 Then restart `npm run dev`.
 
+### Contact form says it could not send
+
+Make sure `.env.local` also includes valid SMTP mailbox credentials:
+
+```text
+SMTP_HOST=smtp.ionos.com
+SMTP_PORT=465
+SMTP_SECURE=true
+SMTP_USER=bookings@geminoxbeats.com
+SMTP_PASS=...
+CONTACT_TO=bookings@geminoxbeats.com
+CONTACT_FROM=bookings@geminoxbeats.com
+```
+
+For IONOS mailboxes, IONOS documents:
+
+- outgoing server: `smtp.ionos.com`
+- port `465` with `SSL/TLS`
+- or port `587` with `STARTTLS`
+
+Once these are set, restart `npm run dev`.
+
 ### Fonts or embeds load slowly on first run
 
 The first local run may take a little longer because Next.js prepares the app and fetches font assets.
@@ -193,7 +224,7 @@ The first local run may take a little longer because Next.js prepares the app an
 
 - This project is ready for local review first.
 - When you are happy with the content and visuals, we can add IONOS deployment steps next.
-- Before deployment, replace placeholder assets and connect any remaining placeholder contact endpoint logic to real services.
+- Before deployment, replace the remaining gallery/download placeholder assets and make sure your SMTP env vars are also configured in Vercel.
 
 ## GitHub -> Vercel -> IONOS
 
@@ -239,6 +270,13 @@ Environment variables required for newsletter signup:
 ```text
 KIT_API_KEY=...
 KIT_FORM_ID=...
+SMTP_HOST=smtp.ionos.com
+SMTP_PORT=465
+SMTP_SECURE=true
+SMTP_USER=bookings@geminoxbeats.com
+SMTP_PASS=...
+CONTACT_TO=bookings@geminoxbeats.com
+CONTACT_FROM=bookings@geminoxbeats.com
 ```
 
 ### 3. Add your domain in Vercel

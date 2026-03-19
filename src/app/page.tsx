@@ -78,37 +78,34 @@ export default function HomePage() {
 
       <SectionShell
         description={siteConfig.soundcloud.description}
-        eyebrow="SoundCloud"
-        title="Your live SoundCloud spotlight, straight from the profile."
+        eyebrow="Listen"
+        title="SoundCloud direct, Spotify in rotation."
       >
         <Reveal>
           <div className="grid gap-6 lg:grid-cols-[minmax(0,0.68fr)_minmax(0,0.32fr)]">
             <div className="panel-glow overflow-hidden">
               <div className="relative min-h-[460px]">
                 <iframe
-                  allow="autoplay"
+                  allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
                   className="h-full w-full"
                   loading="lazy"
-                  src={siteConfig.soundcloud.embedUrl}
-                  title={siteConfig.soundcloud.embedTitle}
+                  src={siteConfig.spotifyPlaylist.embedUrl}
+                  title={siteConfig.spotifyPlaylist.embedTitle}
                 />
               </div>
             </div>
             <div className="panel-glow flex flex-col justify-between p-6">
               <div>
-                <p className="eyebrow mb-2">Profile Spotlight</p>
-                <h3 className="font-display text-4xl text-white">Manage featured picks on SoundCloud, not in the site.</h3>
+                <p className="eyebrow mb-2">Profile + Playlist</p>
+                <h3 className="font-display text-4xl text-white">Open the SoundCloud profile, then fall into the Spotify playlist.</h3>
                 <p className="mt-4 text-base leading-8 text-white/68">
-                  This section now pulls from the public Geminox SoundCloud profile embed. When you update your Spotlight on SoundCloud, this homepage section should reflect that profile-level curation without needing website edits.
-                </p>
-                <p className="mt-4 text-sm leading-7 text-cyan-100/72">
-                  If you want different tracks featured here later, change the Spotlight on SoundCloud instead of editing the website.
+                  This section keeps the listening path simple: direct access to Geminox on SoundCloud, plus a playlist running the wider mood in Spotify.
                 </p>
               </div>
               <div className="mt-8 flex flex-wrap gap-3">
                 <ButtonLink href={siteConfig.soundcloud.profileUrl}>Open SoundCloud</ButtonLink>
-                <ButtonLink href="/music" variant="ghost">
-                  Browse Releases
+                <ButtonLink href={siteConfig.spotifyPlaylist.url} variant="ghost">
+                  Open Spotify Playlist
                 </ButtonLink>
               </div>
             </div>
@@ -116,18 +113,14 @@ export default function HomePage() {
         </Reveal>
       </SectionShell>
 
-      <SectionShell
-        description="The site is ready for live tour data later, but it already handles the no-dates-yet state in a deliberate way."
-        eyebrow="Tour Preview"
-        title="Upcoming shows, handled with intention."
-      >
+      <SectionShell>
         <Reveal>
           <ShowsPanel shows={shows} />
         </Reveal>
       </SectionShell>
 
       <SectionShell
-        description="Two real visuals are reused from the current project, with additional gallery frames held open for future press and club photography."
+        description="A tighter visual edit built around live energy, branded stills, and an editorial rhythm."
         eyebrow="Gallery"
         title="Media that feels editorial, not tossed in."
       >
@@ -137,7 +130,7 @@ export default function HomePage() {
       </SectionShell>
 
       <SectionShell
-        description="A concise statement that positions Geminox as a serious underground tech house project, not a generic EDM template."
+        description="A darker artist statement built around control, restraint, and after-hours tension."
         eyebrow="About"
         title="Low-light tension over obvious spectacle."
       >

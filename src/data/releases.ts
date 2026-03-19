@@ -21,7 +21,7 @@ export const releases: Release[] = [
     title: "Lie Here",
     date: "2026",
     description:
-      "Current Spotify release from the Geminox catalog. Updated from the public artist page on March 18, 2026.",
+      "A sleek late-night cut from the current Geminox Spotify catalog, built on restraint, tension, and after-hours momentum.",
     artwork: "/assets/releases/spotify/lie-here.jpg",
     status: "Latest on Spotify",
     links: [
@@ -36,7 +36,7 @@ export const releases: Release[] = [
     title: "Whino",
     date: "2026",
     description:
-      "Spotify single listed in the current Geminox discography.",
+      "A stripped-back single from the current catalog with a tight, club-facing edge.",
     artwork: "/assets/releases/spotify/whino.jpg",
     status: "Spotify Single",
     links: [
@@ -51,7 +51,7 @@ export const releases: Release[] = [
     title: "Looking for the Sign",
     date: "2025",
     description:
-      "Spotify single listed in the current Geminox discography.",
+      "A focused 2025 release that leans into hypnotic groove and forward motion.",
     artwork: "/assets/releases/spotify/looking-for-the-sign.jpg",
     status: "Spotify Single",
     links: [
@@ -66,7 +66,7 @@ export const releases: Release[] = [
     title: "Room",
     date: "2025",
     description:
-      "Spotify single listed in the current Geminox discography.",
+      "A dark-leaning single shaped around pressure, space, and a cleaner peak-time pulse.",
     artwork: "/assets/releases/spotify/room.jpg",
     status: "Spotify Single",
     links: [
@@ -81,7 +81,7 @@ export const releases: Release[] = [
     title: "Intact",
     date: "2025",
     description:
-      "Explicit Spotify single listed in the current Geminox discography.",
+      "A harder-edged release from the 2025 catalog with more bite in the low end.",
     artwork: "/assets/releases/spotify/intact.jpg",
     status: "Spotify Single",
     links: [
@@ -96,7 +96,7 @@ export const releases: Release[] = [
     title: "Peak",
     date: "2025",
     description:
-      "Spotify single listed in the current Geminox discography.",
+      "A driving catalog cut aimed squarely at locked-in late-room movement.",
     artwork: "/assets/releases/spotify/peak.jpg",
     status: "Spotify Single",
     links: [
@@ -111,7 +111,7 @@ export const releases: Release[] = [
     title: "Fantom",
     date: "2025",
     description:
-      "Spotify single listed in the current Geminox discography.",
+      "A darker record from the catalog with a sharper, more nocturnal feel.",
     artwork: "/assets/releases/spotify/fantom.jpg",
     status: "Spotify Single",
     links: [
@@ -126,7 +126,7 @@ export const releases: Release[] = [
     title: "Pills",
     date: "2025",
     description:
-      "Spotify single listed in the current Geminox discography.",
+      "A rawer 2025 single with direct drum pressure and a stripped-back club frame.",
     artwork: "/assets/releases/spotify/pills.jpg",
     status: "Spotify Single",
     links: [
