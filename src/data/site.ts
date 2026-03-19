@@ -64,9 +64,9 @@ export const siteConfig = {
     ]
   },
   newsletter: {
-    providerLabel: "Mailchimp / Kit placeholder",
+    providerLabel: "Kit",
     integrationNote:
-      "Replace src/app/api/newsletter/route.ts with your real provider integration when ready."
+      "Newsletter signups post to Kit through src/app/api/newsletter/route.ts using KIT_API_KEY and KIT_FORM_ID."
   },
   soundcloud: {
     profileUrl: "https://soundcloud.com/geminox_beats",
