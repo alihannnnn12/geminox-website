@@ -8,20 +8,20 @@ export default function MusicPage() {
   return (
     <>
       <PageHero
-        description="A focused release page built around current Geminox cuts, singles, and catalog highlights."
+        description="Singles and catalog cuts built around late-night pressure, rolling low end, and peak-hour movement."
         eyebrow="Music / Releases"
-        title="A release page built to scale."
+        title="Dark singles and hypnotic cuts from the Geminox catalog."
       >
         <div className="panel-glow p-6">
           <p className="eyebrow mb-2">Current Focus</p>
-          <p className="text-base leading-8 text-white/70">A clean read on the active catalog, led by the strongest Spotify-facing releases in the Geminox orbit.</p>
+          <p className="text-base leading-8 text-white/70">From stripped-back singles to harder-edged club cuts — the active Geminox catalog, straight from Spotify.</p>
         </div>
       </PageHero>
 
       <SectionShell
-        description="Each release card keeps the catalog easy to scan, whether someone is discovering the project or catching up on recent drops."
+        description="From the latest drop to deeper catalog cuts — every release shaped for dark rooms and locked-in floors."
         eyebrow="Catalog"
-        title="Current catalog highlights."
+        title="Current releases."
       >
         <Reveal>
           <ReleaseGrid items={releases} />

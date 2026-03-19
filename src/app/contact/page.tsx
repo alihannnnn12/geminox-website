@@ -9,9 +9,9 @@ export default function ContactPage() {
   return (
     <>
       <PageHero
-        description="A club-friendly contact page with direct booking details, a clear inquiry form, and a fast path for promoters and collaborators."
+        description="Bookings, support slots, and direct inquiries for Geminox — reach out with room details for the fastest response."
         eyebrow="Contact / Bookings"
-        title="A direct line for clubs, promoters, labels, and collaborators."
+        title="Book Geminox for your night, warehouse event, or support slot."
       >
         <div className="panel-glow p-6">
           <p className="eyebrow mb-2">Booking Email</p>

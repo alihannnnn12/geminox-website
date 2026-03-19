@@ -10,20 +10,20 @@ export default function TourPage() {
   return (
     <>
       <PageHero
-        description="A live page that stays clear, direct, and promoter-friendly whether the run is full or between announcements."
+        description="Upcoming Geminox appearances — club nights, warehouse events, and support slots across the circuit."
         eyebrow="Tour / Shows"
-        title="Live dates, cleanly handled whether the calendar is packed or quiet."
+        title="Upcoming shows and live dates."
       >
         <div className="panel-glow p-6">
-          <p className="eyebrow mb-2">Promoter note</p>
+          <p className="eyebrow mb-2">Promoter Note</p>
           <p className="text-base leading-8 text-white/70">{siteConfig.contact.promoterCopy}</p>
         </div>
       </PageHero>
 
       <SectionShell
-        description="Every appearance sits in a clean show feed with room for city, venue, and ticket details."
+        description="Every confirmed appearance — city, venue, and tickets in one place."
         eyebrow="Show Feed"
-        title="Upcoming appearances."
+        title="Confirmed dates."
       >
         <Reveal>
           <ShowsPanel shows={shows} />

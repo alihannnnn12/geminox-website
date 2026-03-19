@@ -7,22 +7,22 @@ export default function AboutPage() {
   return (
     <>
       <PageHero
-        description="A concise artist bio positioned for clubs, promoters, labels, and listeners who care about taste and direction."
+        description="Geminox is a Washington DC underground tech house project built for black rooms, warehouse systems, and after-hours movement."
         eyebrow="About"
-        title="Underground tech house with a darker, more hypnotic edge."
+        title="Dark pressure over spectacle, rolling drums, and late-night control."
       >
         <div className="panel-glow p-6">
-          <p className="eyebrow mb-2">Positioning</p>
+          <p className="eyebrow mb-2">In Short</p>
           <p className="text-base leading-8 text-white/70">
-            Warehouse / rave energy, premium club visuals, and a cleaner headline-artist presentation.
+            Washington DC-based. Underground tech house. Built for warehouse systems, intimate dark rooms, and the kind of late-night sets that hold a floor without tipping into excess.
           </p>
         </div>
       </PageHero>
 
       <SectionShell
-        description="A sharper read on the project voice, built for clubs, promoters, labels, and listeners who care about direction."
+        description="The sound, the approach, and what drives the project — in plain language."
         eyebrow="Artist Statement"
-        title="The project in a few clean paragraphs."
+        title="Control, pressure, and movement from Washington DC."
       >
         <Reveal>
           <div className="grid gap-6 lg:grid-cols-[minmax(0,0.66fr)_minmax(0,0.34fr)]">
