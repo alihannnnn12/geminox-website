@@ -181,6 +181,24 @@ const initialSaveState: SaveState = {
 
 const sectionOrder: SectionId[] = ["home", "music", "tour", "gallery", "contact"];
 
+function buildInitialDocValues(documents: Array<StudioDocument>): StudioDocumentValueMap {
+  const site = documents.find((document): document is StudioDocument<"site"> => document.key === "site");
+  const releases = documents.find((document): document is StudioDocument<"releases"> => document.key === "releases");
+  const shows = documents.find((document): document is StudioDocument<"shows"> => document.key === "shows");
+  const gallery = documents.find((document): document is StudioDocument<"gallery"> => document.key === "gallery");
+
+  if (!site || !releases || !shows || !gallery) {
+    throw new Error("Studio documents are incomplete.");
+  }
+
+  return {
+    gallery: gallery.content,
+    releases: releases.content,
+    shows: shows.content,
+    site: site.content
+  };
+}
+
 function panelFieldClass() {
   return "min-h-12 rounded-[1rem] border border-white/10 bg-[rgba(7,11,18,0.94)] px-4 text-white outline-none transition focus:border-cyan-300/45";
 }
@@ -317,18 +335,7 @@ function sectionButtonClass(active: boolean) {
 
 export function StudioDashboard({ canSave, documents }: StudioDashboardProps) {
   const [activeSection, setActiveSection] = useState<SectionId>("home");
-  const originalDocValues = useMemo(
-    () =>
-      documents.reduce(
-        (accumulator, document) => {
-          accumulator[document.key] = document.content as StudioDocumentValueMap[typeof document.key];
-
-          return accumulator;
-        },
-        {} as StudioDocumentValueMap
-      ),
-    [documents]
-  );
+  const originalDocValues = useMemo(() => buildInitialDocValues(documents), [documents]);
   const [docValues, setDocValues] = useState<StudioDocumentValueMap>(originalDocValues);
   const [saveState, setSaveState] = useState<SaveState>(initialSaveState);
   const [uploadMessage, setUploadMessage] = useState("");
@@ -351,8 +358,20 @@ export function StudioDashboard({ canSave, documents }: StudioDashboardProps) {
     setDocValues((current) => {
       const next = { ...current };
 
-      for (const key of activeMeta.keys) {
-        next[key] = originalDocValues[key];
+      if (activeMeta.keys.includes("site")) {
+        next.site = originalDocValues.site;
+      }
+
+      if (activeMeta.keys.includes("releases")) {
+        next.releases = originalDocValues.releases;
+      }
+
+      if (activeMeta.keys.includes("shows")) {
+        next.shows = originalDocValues.shows;
+      }
+
+      if (activeMeta.keys.includes("gallery")) {
+        next.gallery = originalDocValues.gallery;
       }
 
       return next;
