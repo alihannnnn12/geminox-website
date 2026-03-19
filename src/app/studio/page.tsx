@@ -30,11 +30,11 @@ export default async function StudioPage() {
   }
 
   const documents = studioDocumentKeys.map((key) => ({
+    content: getStudioDocument(key),
     description: studioDocumentMeta[key].description,
     filePath: studioDocumentMeta[key].filePath,
     key,
     title: studioDocumentMeta[key].title,
-    value: JSON.stringify(getStudioDocument(key), null, 2)
   }));
 
   return <StudioDashboard canSave={isGithubStudioConfigured()} documents={documents} />;
