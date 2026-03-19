@@ -12,6 +12,12 @@ import { shows } from "@/data/shows";
 import { siteConfig, socials } from "@/data/site";
 
 export default function HomePage() {
+  const socialPlatforms = socials.filter((item) =>
+    ["Instagram", "TikTok", "YouTube"].includes(item.label)
+  );
+  const musicPlatforms = socials.filter((item) =>
+    ["Spotify", "Apple Music", "SoundCloud", "Beatport"].includes(item.label)
+  );
   const listenServices = [
     ...siteConfig.streamingProfiles
       .filter((profile) => !profile.isPlaceholder)
@@ -189,7 +195,23 @@ export default function HomePage() {
               <div className="panel-glow p-5">
                 <p className="eyebrow mb-2">Socials</p>
                 <div className="flex flex-wrap gap-2">
-                  {socials.map((social) => (
+                  {socialPlatforms.map((social) => (
+                    <a
+                      className="rounded-full border border-white/10 px-4 py-2 text-sm uppercase tracking-[0.12em] text-white/72 transition hover:text-white"
+                      href={social.href}
+                      key={social.href}
+                      rel="noreferrer"
+                      target="_blank"
+                    >
+                      {social.label}
+                    </a>
+                  ))}
+                </div>
+              </div>
+              <div className="panel-glow p-5">
+                <p className="eyebrow mb-2">Music Links</p>
+                <div className="flex flex-wrap gap-2">
+                  {musicPlatforms.map((social) => (
                     <a
                       className="rounded-full border border-white/10 px-4 py-2 text-sm uppercase tracking-[0.12em] text-white/72 transition hover:text-white"
                       href={social.href}
