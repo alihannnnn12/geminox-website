@@ -230,9 +230,9 @@ export default function HomePage() {
       </SectionShell>
 
       <SectionShell
-        description={siteConfig.newsletter.integrationNote}
+        description="Get new releases, show announcements, and the strongest Geminox signals before they hit the wider feed."
         eyebrow="Newsletter"
-        title="Capture listeners before they disappear into the scroll."
+        title="Stay closer to the next release, set, and show drop."
       >
         <Reveal>
           <div id="newsletter">
