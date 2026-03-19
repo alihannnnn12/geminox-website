@@ -82,9 +82,9 @@ export default function HomePage() {
         title="Latest video and playlist in one place."
       >
         <Reveal>
-          <div className="grid gap-6 lg:grid-cols-[minmax(0,0.68fr)_minmax(0,0.32fr)]">
+          <div className="grid gap-6">
             <div className="panel-glow overflow-hidden">
-              <div className="relative min-h-[460px]">
+              <div className="aspect-video w-full">
                 <iframe
                   allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
                   allowFullScreen
@@ -95,10 +95,10 @@ export default function HomePage() {
                 />
               </div>
             </div>
-            <div className="panel-glow flex flex-col justify-between p-6">
+            <div className="panel-glow p-6">
               <div>
                 <p className="eyebrow mb-2">Video + Playlist</p>
-                <h3 className="font-display text-4xl text-white">Latest Geminox visual up front, with the playlist right beside it.</h3>
+                <h3 className="font-display text-4xl text-white">Latest Geminox visual up front, with the playlist lined up right after it.</h3>
                 <p className="mt-4 text-base leading-8 text-white/68">
                   Start with the newest video, then move straight into the Spotify playlist for the wider Geminox lane.
                 </p>
