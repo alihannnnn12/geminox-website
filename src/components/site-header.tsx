@@ -118,22 +118,10 @@ export function SiteHeader() {
           type="button"
         >
           <span className="sr-only">Menu</span>
-          <span className="relative block h-5 w-5">
-            <span
-              className={`absolute left-1/2 top-1/2 block h-px w-4 -translate-x-1/2 -translate-y-[6px] bg-current transition duration-300 ${
-                open ? "translate-y-0 rotate-45" : ""
-              }`}
-            />
-            <span
-              className={`absolute left-1/2 top-1/2 block h-px w-4 -translate-x-1/2 bg-current transition duration-200 ${
-                open ? "opacity-0" : "opacity-100"
-              }`}
-            />
-            <span
-              className={`absolute left-1/2 top-1/2 block h-px w-4 -translate-x-1/2 translate-y-[6px] bg-current transition duration-300 ${
-                open ? "translate-y-0 -rotate-45" : ""
-              }`}
-            />
+          <span className="space-y-1">
+            <span className="block h-px w-5 bg-current" />
+            <span className="block h-px w-5 bg-current" />
+            <span className="block h-px w-5 bg-current" />
           </span>
         </button>
       </div>
@@ -162,9 +150,8 @@ export function SiteHeader() {
               }}
             >
               <div className="rounded-[1.75rem] border border-white/10 bg-white/[0.03] p-3 shadow-[0_24px_80px_rgba(0,0,0,0.45)]">
-                <div className="mb-3 flex items-center justify-between px-3 pt-1">
+                <div className="mb-3 px-3 pt-1">
                   <p className="text-[10px] uppercase tracking-[0.28em] text-cyan-100/60">Navigate</p>
-                  <span className="h-2 w-2 rounded-full bg-cyan-300/75 shadow-[0_0_14px_rgba(103,232,249,0.9)]" />
                 </div>
                 <div className="flex flex-col">
                   {navigation.map((item) => (
