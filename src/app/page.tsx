@@ -158,9 +158,9 @@ export default function HomePage() {
       </section>
 
       <SectionShell
-        description="A tighter visual edit built around live energy, branded stills, and an editorial rhythm."
+        description="A visual lane built from dark-room stills, live moments, and the sharper side of the Geminox world."
         eyebrow="Gallery"
-        title="Media that feels editorial, not tossed in."
+        title="Visuals with more atmosphere, pressure, and intent."
       >
         <Reveal>
           <GalleryGrid items={galleryItems.slice(0, 4)} />
