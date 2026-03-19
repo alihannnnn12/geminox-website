@@ -120,17 +120,17 @@ export function SiteHeader() {
           <span className="sr-only">Menu</span>
           <span className="relative block h-5 w-5">
             <span
-              className={`absolute left-0 top-1/2 block h-px w-5 -translate-y-[7px] bg-current transition duration-300 ${
+              className={`absolute left-1/2 top-1/2 block h-px w-4 -translate-x-1/2 -translate-y-[6px] bg-current transition duration-300 ${
                 open ? "translate-y-0 rotate-45" : ""
               }`}
             />
             <span
-              className={`absolute left-0 top-1/2 block h-px w-5 bg-current transition duration-200 ${
+              className={`absolute left-1/2 top-1/2 block h-px w-4 -translate-x-1/2 bg-current transition duration-200 ${
                 open ? "opacity-0" : "opacity-100"
               }`}
             />
             <span
-              className={`absolute left-0 top-1/2 block h-px w-5 translate-y-[7px] bg-current transition duration-300 ${
+              className={`absolute left-1/2 top-1/2 block h-px w-4 -translate-x-1/2 translate-y-[6px] bg-current transition duration-300 ${
                 open ? "translate-y-0 -rotate-45" : ""
               }`}
             />
@@ -176,12 +176,11 @@ export function SiteHeader() {
                       }}
                     >
                       <Link
-                        className="flex items-center justify-between border-b border-white/8 px-3 py-3.5 text-sm uppercase tracking-[0.18em] text-white/82 transition hover:text-white"
+                        className="block border-b border-white/8 px-3 py-3.5 text-sm uppercase tracking-[0.18em] text-white/82 transition hover:text-white"
                         href={item.href}
                         onClick={() => setOpen(false)}
                       >
-                        <span>{item.label}</span>
-                        <span className="text-white/30">/</span>
+                        {item.label}
                       </Link>
                     </motion.div>
                   ))}
