@@ -979,7 +979,7 @@ export function StudioDashboard({ canSave, documents }: StudioDashboardProps) {
 
         <div className="grid gap-5">
           {releases.map((release, index) => (
-            <SectionCard key={`${release.slug}-${index}`} title={`Release ${index + 1}`}>
+            <SectionCard key={`release-${index}`} title={`Release ${index + 1}`}>
               <div className="grid gap-4 lg:grid-cols-[minmax(0,1fr)_260px]">
                 <div className="grid gap-4">
                   <div className="grid gap-4 md:grid-cols-2">
@@ -1096,7 +1096,7 @@ export function StudioDashboard({ canSave, documents }: StudioDashboardProps) {
                   </AddButton>
                 </div>
                 {release.links.map((link, linkIndex) => (
-                  <div className="grid gap-4 md:grid-cols-[minmax(0,0.35fr)_minmax(0,0.65fr)_auto] md:items-end" key={`${release.slug}-link-${linkIndex}`}>
+                  <div className="grid gap-4 md:grid-cols-[minmax(0,0.35fr)_minmax(0,0.65fr)_auto] md:items-end" key={`release-link-${index}-${linkIndex}`}>
                     {inputGroup(
                       "Button text",
                       <input
@@ -1193,7 +1193,7 @@ export function StudioDashboard({ canSave, documents }: StudioDashboardProps) {
           </div>
         ) : null}
         {shows.map((show, index) => (
-          <SectionCard key={`${show.date}-${show.venue}-${index}`} title={`Show ${index + 1}`}>
+          <SectionCard key={`show-${index}`} title={`Show ${index + 1}`}>
             <div className="grid gap-4 md:grid-cols-2">
               {inputGroup(
                 "Date",
@@ -1278,7 +1278,7 @@ export function StudioDashboard({ canSave, documents }: StudioDashboardProps) {
     return (
       <div className="grid gap-5">
         {gallery.map((item, index) => (
-          <SectionCard key={`${item.src}-${index}`} title={`Gallery item ${index + 1}`}>
+          <SectionCard key={`gallery-${index}`} title={`Gallery item ${index + 1}`}>
             <div className="grid gap-4 lg:grid-cols-[minmax(0,1fr)_260px]">
               <div className="grid gap-4">
                 <div className="grid gap-4 md:grid-cols-2">
