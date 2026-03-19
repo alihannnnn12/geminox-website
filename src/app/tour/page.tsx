@@ -31,7 +31,6 @@ export default function TourPage() {
       </SectionShell>
 
       <SectionShell
-        description="When the calendar is quiet, the strongest next step is a direct path to bookings and the newsletter."
         eyebrow="Next Step"
         title="Need a direct booking line?"
       >
