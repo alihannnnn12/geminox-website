@@ -1,5 +1,13 @@
 export function formatDate(date: string) {
-  const parsed = new Date(date);
+  const value = date.trim();
+
+  // Only auto-format ISO-style dates. Free-form labels like "April 18" or
+  // "TBA" should stay exactly as entered in the studio.
+  if (!/^\d{4}-\d{2}-\d{2}$/.test(value)) {
+    return date;
+  }
+
+  const parsed = new Date(value);
 
   if (Number.isNaN(parsed.getTime())) {
     return date;

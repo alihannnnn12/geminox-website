@@ -46,9 +46,15 @@ export function ShowsPanel({ shows }: ShowsPanelProps) {
             <p className="text-xs uppercase tracking-[0.18em] text-cyan-200/75">Venue</p>
             <p className="mt-2 text-lg text-white">{show.venue}</p>
           </div>
-          <ButtonLink href={show.ticketUrl} variant="secondary">
-            Tickets
-          </ButtonLink>
+          {show.ticketUrl ? (
+            <ButtonLink href={show.ticketUrl} variant="secondary">
+              Tickets
+            </ButtonLink>
+          ) : (
+            <span className="inline-flex min-h-11 items-center rounded-full border border-dashed border-white/15 px-4 text-xs uppercase tracking-[0.18em] text-white/45">
+              Details Soon
+            </span>
+          )}
         </div>
       ))}
     </div>
