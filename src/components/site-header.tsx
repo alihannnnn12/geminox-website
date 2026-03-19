@@ -51,12 +51,10 @@ function SocialIcon({ label }: { label: string }) {
     case "Apple Music":
       return (
         <svg aria-hidden="true" className={shared} fill="none" viewBox="0 0 24 24">
+          <rect height="15" rx="4.2" stroke="currentColor" strokeWidth="1.7" width="15" x="4.5" y="4.5" />
           <path
-            d="M14.5 6.2v8a2.7 2.7 0 1 1-1.7-2.5V8.3l5-1.1v6.1a2.7 2.7 0 1 1-1.7-2.5V5.4l-1.6.8Z"
-            stroke="currentColor"
-            strokeLinecap="round"
-            strokeLinejoin="round"
-            strokeWidth="1.7"
+            d="M10.4 16.4a1.8 1.8 0 1 1 0-3.6c.35 0 .68.08.95.2V9.6l4.15-1.02v5.03a1.8 1.8 0 1 1-1.3-1.72v-1.74l-2.85.68v5.51a1.8 1.8 0 0 1-.95.04Z"
+            fill="currentColor"
           />
         </svg>
       );
@@ -75,8 +73,12 @@ function SocialIcon({ label }: { label: string }) {
     case "Beatport":
       return (
         <svg aria-hidden="true" className={shared} fill="none" viewBox="0 0 24 24">
-          <circle cx="12" cy="12" r="8.2" stroke="currentColor" strokeWidth="1.7" />
-          <path d="M10.2 8.6v7.1a2 2 0 1 1-1.4-1.9V9.8l5.4-1.2v5.7a2 2 0 1 1-1.4-1.9V7.7l-2.6.9Z" fill="currentColor" />
+          <circle cx="12" cy="12" fill="currentColor" r="2.35" />
+          <path d="M7.55 12.95a4.45 4.45 0 1 1 8.9 0" stroke="currentColor" strokeLinecap="round" strokeWidth="1.7" />
+          <path
+            d="M7.5 12.95c0-.6.5-1.1 1.1-1.1h.7v4.45h-.7c-.6 0-1.1-.49-1.1-1.1v-2.24Zm7.2-1.1h.7c.6 0 1.1.5 1.1 1.1v2.24c0 .61-.5 1.1-1.1 1.1h-.7v-4.45Z"
+            fill="currentColor"
+          />
         </svg>
       );
     case "Bookings":

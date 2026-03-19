@@ -115,6 +115,9 @@ export default function HomePage() {
 
       <section className="section-wrap">
         <div className="mx-auto max-w-7xl px-5 sm:px-6 lg:px-8">
+          <div className="mb-10 max-w-3xl">
+            <p className="eyebrow">Tour Preview</p>
+          </div>
           <Reveal>
             <ShowsPanel shows={shows} />
           </Reveal>
