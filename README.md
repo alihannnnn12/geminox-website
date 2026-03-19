@@ -84,6 +84,7 @@ npm run test:e2e:ui
 src/
   app/                  Next.js app routes and API placeholders
   components/           Reusable UI and interactive components
+  content/              JSON content files used by the site and the hidden studio
   data/                 Easy-to-edit content files
   lib/                  Small helpers
 public/
@@ -93,6 +94,8 @@ tests/                  Playwright tests
 ```
 
 ## Where To Edit Content
+
+Fastest code-based edits:
 
 - Hero text: `src/data/site.ts`
 - Booking email: `src/data/site.ts`
@@ -104,6 +107,15 @@ tests/                  Playwright tests
 - Gallery images: `src/data/gallery.ts`
 - Newsletter integration: `src/app/api/newsletter/route.ts`
 - Contact form integration: `src/app/api/contact/route.ts`
+
+Browser-based content editing:
+
+- Hidden editor route: `/studio`
+- Real editable JSON source files:
+  - `src/content/site.json`
+  - `src/content/releases.json`
+  - `src/content/shows.json`
+  - `src/content/gallery.json`
 
 ## Current Real Content Reused
 
@@ -142,6 +154,11 @@ Add these values to `.env.local`:
 ```text
 KIT_API_KEY=your_kit_api_key
 KIT_FORM_ID=your_kit_form_id
+STUDIO_PASSWORD=choose_a_long_private_password
+STUDIO_GITHUB_TOKEN=github_fine_grained_token_with_contents_write
+STUDIO_GITHUB_OWNER=alihannnnn12
+STUDIO_GITHUB_REPO=geminox-website
+STUDIO_GITHUB_BRANCH=main
 ```
 
 Current provider setup:
@@ -149,6 +166,30 @@ Current provider setup:
 - Newsletter provider: `Kit`
 - Newsletter route: `src/app/api/newsletter/route.ts`
 - Newsletter form component: `src/components/newsletter-form.tsx`
+
+Studio setup:
+
+- Hidden editor route: `/studio`
+- Password gate: `STUDIO_PASSWORD`
+- Save target: GitHub repo contents API
+- Required GitHub token permission: repository `Contents` write
+- Result after save: the studio commits updated JSON or uploaded images into the repo, then Vercel auto-deploys from `main`
+
+Recommended GitHub token setup:
+
+1. Create a fine-grained personal access token on GitHub.
+2. Limit it to this repo: `alihannnnn12/geminox-website`
+3. Grant `Contents: Read and write`
+4. Put that token into `STUDIO_GITHUB_TOKEN`
+
+How `/studio` works:
+
+1. Open `/studio`
+2. Enter your `STUDIO_PASSWORD`
+3. Edit one of the JSON documents in the browser
+4. Click `Save to GitHub`
+5. Wait for Vercel to redeploy the site
+6. Optional: upload an image, then paste the returned `/assets/uploads/...` path into one of the JSON files and save again
 
 ## Common Troubleshooting
 
@@ -188,6 +229,20 @@ Then restart `npm run dev`.
 ### Fonts or embeds load slowly on first run
 
 The first local run may take a little longer because Next.js prepares the app and fetches font assets.
+
+### `/studio` says save is disabled
+
+Make sure these env vars exist:
+
+```text
+STUDIO_PASSWORD=...
+STUDIO_GITHUB_TOKEN=...
+STUDIO_GITHUB_OWNER=alihannnnn12
+STUDIO_GITHUB_REPO=geminox-website
+STUDIO_GITHUB_BRANCH=main
+```
+
+Then restart `npm run dev`.
 
 ## Notes For Future Deployment
 

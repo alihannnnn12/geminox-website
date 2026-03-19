@@ -1,3 +1,5 @@
+import showsContent from "@/content/shows.json";
+
 export type Show = {
   date: string;
   city: string;
@@ -5,4 +7,4 @@ export type Show = {
   ticketUrl: string;
 };
 
-export const shows: Show[] = [];
+export const shows: Show[] = showsContent as Show[];

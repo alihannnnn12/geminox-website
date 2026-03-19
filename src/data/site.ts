@@ -1,3 +1,5 @@
+import siteContent from "@/content/site.json";
+
 export type NavItem = {
   href: string;
   label: string;
@@ -8,10 +10,74 @@ export type SocialItem = {
   label: string;
 };
 
-export const featureFlags = {
-  epk: false,
-  merch: false
-} as const;
+type FeatureFlags = {
+  epk: boolean;
+  merch: boolean;
+};
+
+type SiteConfig = {
+  name: string;
+  title: string;
+  description: string;
+  location: string;
+  bookingEmail: string;
+  genre: string;
+  hero: {
+    kicker: string;
+    title: string;
+    description: string;
+    primaryCta: NavItem;
+    secondaryCta: NavItem;
+    tertiaryCta: NavItem;
+    announcement: {
+      label: string;
+      title: string;
+      copy: string;
+    };
+  };
+  about: {
+    short: string;
+    long: string[];
+  };
+  newsletter: {
+    providerLabel: string;
+    integrationNote: string;
+  };
+  latestVideo: {
+    url: string;
+    embedUrl: string;
+    embedTitle: string;
+    description: string;
+  };
+  spotifyPlaylist: {
+    url: string;
+    embedUrl: string;
+    embedTitle: string;
+  };
+  contact: {
+    promoterCopy: string;
+    responseNote: string;
+  };
+  epk: {
+    facts: Array<{
+      label: string;
+      value: string;
+    }>;
+  };
+  streamingProfiles: Array<{
+    label: string;
+    value: string;
+    isPlaceholder?: boolean;
+  }>;
+};
+
+const content = siteContent as {
+  featureFlags: FeatureFlags;
+  socials: SocialItem[];
+  siteConfig: SiteConfig;
+};
+
+export const featureFlags = content.featureFlags;
 
 const allNavigation: Array<NavItem & { enabled: boolean }> = [
   { href: "/", label: "Home", enabled: true },
@@ -25,87 +91,5 @@ const allNavigation: Array<NavItem & { enabled: boolean }> = [
 ];
 
 export const navigation: NavItem[] = allNavigation.filter((item) => item.enabled);
-
-export const socials: SocialItem[] = [
-  { href: "https://www.instagram.com/geminox_beats/", label: "Instagram" },
-  { href: "https://www.tiktok.com/@geminox_beats", label: "TikTok" },
-  { href: "https://www.youtube.com/@geminox_beats", label: "YouTube" },
-  { href: "https://open.spotify.com/artist/23sLtEwFbFysRPtji4FMCB", label: "Spotify" },
-  { href: "https://music.apple.com/us/artist/geminox/1779764663", label: "Apple Music" },
-  { href: "https://soundcloud.com/geminox_beats", label: "SoundCloud" },
-  { href: "https://www.beatport.com/artist/geminox/1270709", label: "Beatport" },
-  { href: "mailto:bookings@geminoxbeats.com", label: "Bookings" }
-];
-
-export const siteConfig = {
-  name: "Geminox",
-  title: "Geminox | Underground Tech House",
-  description:
-    "Geminox is a Washington DC-based underground tech house artist. Hypnotic percussion, dark low end, and late-night warehouse energy for black-room dance floors.",
-  location: "Washington DC",
-  bookingEmail: "bookings@geminoxbeats.com",
-  genre: "Underground Tech House",
-  hero: {
-    kicker: "Washington DC / Underground Tech House",
-    title: "Late-night pressure for black-room dance floors.",
-    description:
-      "Geminox moves through hypnotic percussion, smoke-heavy low end, and sleek warehouse tension designed for peak-hour rooms and after-hours momentum.",
-    primaryCta: { href: "/music", label: "Listen Now" },
-    secondaryCta: { href: "#newsletter", label: "Join Newsletter" },
-    tertiaryCta: { href: "/contact", label: "Book Geminox" },
-    announcement: {
-      label: "Latest signal",
-      title: "No Fakers",
-      copy: "A sharp new Geminox release built for stripped-back pressure and after-hours rooms."
-    }
-  },
-  about: {
-    short:
-      "Geminox is a Washington DC-based artist project rooted in underground tech house, focused on hypnotic grooves, club tension, and sleek late-night energy.",
-    long: [
-      "Built for warehouse systems and intimate rooms alike, the project leans into pressure over spectacle: rolling drums, shadowy basslines, and patient transitions that keep a floor locked without tipping into excess.",
-      "From Washington DC outward, the project stays centered on control, movement, and atmosphere, pairing sleek production with a darker club sensibility that feels equally at home in direct support slots and late-night warehouse rooms."
-    ]
-  },
-  newsletter: {
-    providerLabel: "Kit",
-    integrationNote:
-      "Join the Geminox list for release alerts, mix drops, show announcements, and late-night updates."
-  },
-  latestVideo: {
-    url: "https://youtu.be/gMijFXfiig0",
-    embedUrl: "https://www.youtube.com/embed/gMijFXfiig0",
-    embedTitle: "Geminox latest YouTube video",
-    description:
-      "Watch the latest Geminox video and keep the Spotify playlist running alongside it."
-  },
-  spotifyPlaylist: {
-    url: "https://open.spotify.com/playlist/6f3CQmny50cDvvPWaEiLSw?si=7e5a193d84f441f3",
-    embedUrl: "https://open.spotify.com/embed/playlist/6f3CQmny50cDvvPWaEiLSw?utm_source=generator&theme=0",
-    embedTitle: "Geminox Spotify playlist"
-  },
-  contact: {
-    promoterCopy:
-      "Open for club nights, direct support, label showcases, warehouse events, and curated late-night bookings.",
-    responseNote:
-      "Use the form below for inquiries, or reach out directly by email for the fastest booking response."
-  },
-  epk: {
-    facts: [
-      { label: "Genre", value: "Underground Tech House" },
-      { label: "Base", value: "Washington DC" },
-      { label: "Booking", value: "bookings@geminoxbeats.com" },
-      { label: "Featured Mix", value: "YouTube embed available" }
-    ]
-  },
-  streamingProfiles: [
-    {
-      label: "Spotify",
-      value: "https://open.spotify.com/artist/23sLtEwFbFysRPtji4FMCB",
-      isPlaceholder: false
-    },
-    { label: "Apple Music", value: "https://music.apple.com/us/artist/geminox/1779764663", isPlaceholder: false },
-    { label: "Beatport", value: "https://www.beatport.com/artist/geminox/1270709", isPlaceholder: false },
-    { label: "SoundCloud", value: "https://soundcloud.com/geminox_beats", isPlaceholder: false }
-  ]
-} as const;
+export const socials: SocialItem[] = content.socials;
+export const siteConfig: SiteConfig = content.siteConfig;

@@ -1,0 +1,114 @@
+[
+  {
+    "slug": "lie-here",
+    "title": "Lie Here",
+    "date": "2026",
+    "description": "A sleek late-night cut from the current Geminox Spotify catalog, built on restraint, tension, and after-hours momentum.",
+    "artwork": "/assets/releases/spotify/lie-here.jpg",
+    "status": "Latest on Spotify",
+    "links": [
+      {
+        "href": "https://open.spotify.com/album/2HibE3pLleodjrLak2GHqN",
+        "label": "Open on Spotify"
+      }
+    ]
+  },
+  {
+    "slug": "whino",
+    "title": "Whino",
+    "date": "2026",
+    "description": "A stripped-back single from the current catalog with a tight, club-facing edge.",
+    "artwork": "/assets/releases/spotify/whino.jpg",
+    "status": "Spotify Single",
+    "links": [
+      {
+        "href": "https://open.spotify.com/album/69RYFrMmnZN0fC3wjoyv6t",
+        "label": "Open on Spotify"
+      }
+    ]
+  },
+  {
+    "slug": "looking-for-the-sign",
+    "title": "Looking for the Sign",
+    "date": "2025",
+    "description": "A focused 2025 release that leans into hypnotic groove and forward motion.",
+    "artwork": "/assets/releases/spotify/looking-for-the-sign.jpg",
+    "status": "Spotify Single",
+    "links": [
+      {
+        "href": "https://open.spotify.com/album/4DE9TNRsQOXzCYjvvkVK6q",
+        "label": "Open on Spotify"
+      }
+    ]
+  },
+  {
+    "slug": "room",
+    "title": "Room",
+    "date": "2025",
+    "description": "A dark-leaning single shaped around pressure, space, and a cleaner peak-time pulse.",
+    "artwork": "/assets/releases/spotify/room.jpg",
+    "status": "Spotify Single",
+    "links": [
+      {
+        "href": "https://open.spotify.com/album/2CwPHcHKVP7gJE0tuLR6cX",
+        "label": "Open on Spotify"
+      }
+    ]
+  },
+  {
+    "slug": "intact",
+    "title": "Intact",
+    "date": "2025",
+    "description": "A harder-edged release from the 2025 catalog with more bite in the low end.",
+    "artwork": "/assets/releases/spotify/intact.jpg",
+    "status": "Spotify Single",
+    "links": [
+      {
+        "href": "https://open.spotify.com/album/4mMCWdAB17xhXYESSvri66",
+        "label": "Open on Spotify"
+      }
+    ]
+  },
+  {
+    "slug": "peak",
+    "title": "Peak",
+    "date": "2025",
+    "description": "A driving catalog cut aimed squarely at locked-in late-room movement.",
+    "artwork": "/assets/releases/spotify/peak.jpg",
+    "status": "Spotify Single",
+    "links": [
+      {
+        "href": "https://open.spotify.com/album/5MesQlBuSGmFdFGDkhWPy9",
+        "label": "Open on Spotify"
+      }
+    ]
+  },
+  {
+    "slug": "fantom",
+    "title": "Fantom",
+    "date": "2025",
+    "description": "A darker record from the catalog with a sharper, more nocturnal feel.",
+    "artwork": "/assets/releases/spotify/fantom.jpg",
+    "status": "Spotify Single",
+    "links": [
+      {
+        "href": "https://open.spotify.com/album/38gIz2zcjm6gR2lyDT6XPx",
+        "label": "Open on Spotify"
+      }
+    ]
+  },
+  {
+    "slug": "pills",
+    "title": "Pills",
+    "date": "2025",
+    "description": "A rawer 2025 single with direct drum pressure and a stripped-back club frame.",
+    "artwork": "/assets/releases/spotify/pills.jpg",
+    "status": "Spotify Single",
+    "links": [
+      {
+        "href": "https://open.spotify.com/album/3OEwIw89stRdwBXF7VbPpF",
+        "label": "Open on Spotify"
+      }
+    ]
+  }
+]
