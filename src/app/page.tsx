@@ -170,67 +170,69 @@ export default function HomePage() {
         </div>
       </section>
 
-      <SectionShell
-        description="A darker artist statement built around control, restraint, and after-hours tension."
-        eyebrow="About"
-        title="Low-light tension over obvious spectacle."
-      >
-        <Reveal>
-          <div className="grid gap-6 lg:grid-cols-[minmax(0,0.65fr)_minmax(0,0.35fr)]">
-            <div className="panel-glow p-6 lg:p-8">
-              {siteConfig.about.long.map((paragraph) => (
-                <p className="mb-5 text-base leading-8 text-white/70 last:mb-0" key={paragraph}>
-                  {paragraph}
-                </p>
-              ))}
-            </div>
-            <div className="grid gap-4">
-              <div className="panel-glow p-5">
-                <p className="eyebrow mb-2">Location</p>
-                <p className="text-2xl text-white">{siteConfig.location}</p>
-              </div>
-              <div className="panel-glow p-5">
-                <p className="eyebrow mb-2">Contact</p>
-                <a className="text-2xl text-white" href={`mailto:${siteConfig.bookingEmail}`}>
-                  {siteConfig.bookingEmail}
-                </a>
-              </div>
-              <div className="panel-glow p-5">
-                <p className="eyebrow mb-2">Socials</p>
-                <div className="flex flex-wrap gap-2">
-                  {socialPlatforms.map((social) => (
-                    <a
-                      className="rounded-full border border-white/10 px-4 py-2 text-sm uppercase tracking-[0.12em] text-white/72 transition hover:text-white"
-                      href={social.href}
-                      key={social.href}
-                      rel="noreferrer"
-                      target="_blank"
-                    >
-                      {social.label}
-                    </a>
-                  ))}
-                </div>
-              </div>
-              <div className="panel-glow p-5">
-                <p className="eyebrow mb-2">Music Links</p>
-                <div className="flex flex-wrap gap-2">
-                  {musicPlatforms.map((social) => (
-                    <a
-                      className="rounded-full border border-white/10 px-4 py-2 text-sm uppercase tracking-[0.12em] text-white/72 transition hover:text-white"
-                      href={social.href}
-                      key={social.href}
-                      rel="noreferrer"
-                      target="_blank"
-                    >
-                      {social.label}
-                    </a>
-                  ))}
-                </div>
-              </div>
-            </div>
+      <section className="section-wrap">
+        <div className="mx-auto max-w-7xl px-5 sm:px-6 lg:px-8">
+          <div className="mb-10 max-w-3xl">
+            <p className="eyebrow">About</p>
+            <p className="section-copy mt-4">A darker artist statement built around control, restraint, and after-hours tension.</p>
           </div>
-        </Reveal>
-      </SectionShell>
+          <Reveal>
+            <div className="grid gap-6 lg:grid-cols-[minmax(0,0.65fr)_minmax(0,0.35fr)]">
+              <div className="panel-glow p-6 lg:p-8">
+                {siteConfig.about.long.map((paragraph) => (
+                  <p className="mb-5 text-base leading-8 text-white/70 last:mb-0" key={paragraph}>
+                    {paragraph}
+                  </p>
+                ))}
+              </div>
+              <div className="grid gap-4">
+                <div className="panel-glow p-5">
+                  <p className="eyebrow mb-2">Location</p>
+                  <p className="text-2xl text-white">{siteConfig.location}</p>
+                </div>
+                <div className="panel-glow p-5">
+                  <p className="eyebrow mb-2">Contact</p>
+                  <a className="text-2xl text-white" href={`mailto:${siteConfig.bookingEmail}`}>
+                    {siteConfig.bookingEmail}
+                  </a>
+                </div>
+                <div className="panel-glow p-5">
+                  <p className="eyebrow mb-2">Socials</p>
+                  <div className="flex flex-wrap gap-2">
+                    {socialPlatforms.map((social) => (
+                      <a
+                        className="rounded-full border border-white/10 px-4 py-2 text-sm uppercase tracking-[0.12em] text-white/72 transition hover:text-white"
+                        href={social.href}
+                        key={social.href}
+                        rel="noreferrer"
+                        target="_blank"
+                      >
+                        {social.label}
+                      </a>
+                    ))}
+                  </div>
+                </div>
+                <div className="panel-glow p-5">
+                  <p className="eyebrow mb-2">Music Links</p>
+                  <div className="flex flex-wrap gap-2">
+                    {musicPlatforms.map((social) => (
+                      <a
+                        className="rounded-full border border-white/10 px-4 py-2 text-sm uppercase tracking-[0.12em] text-white/72 transition hover:text-white"
+                        href={social.href}
+                        key={social.href}
+                        rel="noreferrer"
+                        target="_blank"
+                      >
+                        {social.label}
+                      </a>
+                    ))}
+                  </div>
+                </div>
+              </div>
+            </div>
+          </Reveal>
+        </div>
+      </section>
 
       <SectionShell
         description="Get new releases, show announcements, and the strongest Geminox signals before they hit the wider feed."
