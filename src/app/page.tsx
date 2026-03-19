@@ -77,33 +77,43 @@ export default function HomePage() {
       </section>
 
       <SectionShell
-        description={siteConfig.soundcloud.description}
+        description={siteConfig.latestVideo.description}
         eyebrow="Listen"
-        title="SoundCloud direct, Spotify in rotation."
+        title="Latest video and playlist in one place."
       >
         <Reveal>
           <div className="grid gap-6 lg:grid-cols-[minmax(0,0.68fr)_minmax(0,0.32fr)]">
             <div className="panel-glow overflow-hidden">
               <div className="relative min-h-[460px]">
                 <iframe
-                  allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                  allowFullScreen
                   className="h-full w-full"
                   loading="lazy"
-                  src={siteConfig.spotifyPlaylist.embedUrl}
-                  title={siteConfig.spotifyPlaylist.embedTitle}
+                  src={siteConfig.latestVideo.embedUrl}
+                  title={siteConfig.latestVideo.embedTitle}
                 />
               </div>
             </div>
             <div className="panel-glow flex flex-col justify-between p-6">
               <div>
-                <p className="eyebrow mb-2">Profile + Playlist</p>
-                <h3 className="font-display text-4xl text-white">Open the SoundCloud profile, then fall into the Spotify playlist.</h3>
+                <p className="eyebrow mb-2">Video + Playlist</p>
+                <h3 className="font-display text-4xl text-white">Latest Geminox visual up front, with the playlist right beside it.</h3>
                 <p className="mt-4 text-base leading-8 text-white/68">
-                  This section keeps the listening path simple: direct access to Geminox on SoundCloud, plus a playlist running the wider mood in Spotify.
+                  Start with the newest video, then move straight into the Spotify playlist for the wider Geminox lane.
                 </p>
+                <div className="mt-6 overflow-hidden rounded-[1.35rem] border border-white/10 bg-[rgba(7,11,18,0.7)]">
+                  <iframe
+                    allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+                    className="h-[352px] w-full"
+                    loading="lazy"
+                    src={siteConfig.spotifyPlaylist.embedUrl}
+                    title={siteConfig.spotifyPlaylist.embedTitle}
+                  />
+                </div>
               </div>
               <div className="mt-8 flex flex-wrap gap-3">
-                <ButtonLink href={siteConfig.soundcloud.profileUrl}>Open SoundCloud</ButtonLink>
+                <ButtonLink href={siteConfig.latestVideo.url}>Watch on YouTube</ButtonLink>
                 <ButtonLink href={siteConfig.spotifyPlaylist.url} variant="ghost">
                   Open Spotify Playlist
                 </ButtonLink>

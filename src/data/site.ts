@@ -72,10 +72,12 @@ export const siteConfig = {
     integrationNote:
       "Join the Geminox list for release alerts, mix drops, show announcements, and late-night updates."
   },
-  soundcloud: {
-    profileUrl: "https://soundcloud.com/geminox_beats",
+  latestVideo: {
+    url: "https://youtu.be/gMijFXfiig0",
+    embedUrl: "https://www.youtube.com/embed/gMijFXfiig0",
+    embedTitle: "Geminox latest YouTube video",
     description:
-      "Move between the Geminox SoundCloud profile and a selected Spotify playlist without leaving the site."
+      "Watch the latest Geminox video and keep the Spotify playlist running alongside it."
   },
   spotifyPlaylist: {
     url: "https://open.spotify.com/playlist/6f3CQmny50cDvvPWaEiLSw?si=7e5a193d84f441f3",
