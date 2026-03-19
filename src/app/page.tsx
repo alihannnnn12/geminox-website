@@ -105,27 +105,27 @@ export default function HomePage() {
         title="Latest video and playlist in one place."
       >
         <Reveal>
-          <div className="grid gap-6">
-            <div className="panel-glow overflow-hidden">
-              <div className="aspect-video w-full">
-                <iframe
-                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                  allowFullScreen
-                  className="h-full w-full"
-                  loading="lazy"
-                  src={siteConfig.latestVideo.embedUrl}
-                  title={siteConfig.latestVideo.embedTitle}
-                />
-              </div>
-            </div>
-            <div className="panel-glow p-6">
-              <div>
-                <p className="eyebrow mb-2">Video + Playlist</p>
-                <h3 className="font-display text-4xl text-white">Latest Geminox visual up front, with the playlist lined up right after it.</h3>
-                <p className="mt-4 text-base leading-8 text-white/68">
-                  Start with the newest video, then move straight into the Spotify playlist for the wider Geminox lane.
-                </p>
-                <div className="mt-6 overflow-hidden rounded-[1.35rem] border border-white/10 bg-[rgba(7,11,18,0.7)]">
+          <div className="panel-glow p-6">
+            <div>
+              <p className="eyebrow mb-2">Video + Playlist</p>
+              <h3 className="font-display text-4xl text-white">Latest Geminox visual up front, with the playlist lined up right after it.</h3>
+              <p className="mt-4 text-base leading-8 text-white/68">
+                Start with the newest video, then move straight into the Spotify playlist for the wider Geminox lane.
+              </p>
+              <div className="mt-6 grid gap-6">
+                <div className="overflow-hidden rounded-[1.35rem] border border-white/10 bg-[rgba(7,11,18,0.7)]">
+                  <div className="aspect-video w-full">
+                    <iframe
+                      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                      allowFullScreen
+                      className="h-full w-full"
+                      loading="lazy"
+                      src={siteConfig.latestVideo.embedUrl}
+                      title={siteConfig.latestVideo.embedTitle}
+                    />
+                  </div>
+                </div>
+                <div className="overflow-hidden rounded-[1.35rem] border border-white/10 bg-[rgba(7,11,18,0.7)]">
                   <iframe
                     allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
                     className="h-[352px] w-full"
@@ -135,12 +135,12 @@ export default function HomePage() {
                   />
                 </div>
               </div>
-              <div className="mt-8 flex flex-wrap gap-3">
-                <ButtonLink href={siteConfig.latestVideo.url}>Watch on YouTube</ButtonLink>
-                <ButtonLink href={siteConfig.spotifyPlaylist.url} variant="ghost">
-                  Open Spotify Playlist
-                </ButtonLink>
-              </div>
+            </div>
+            <div className="mt-8 flex flex-wrap gap-3">
+              <ButtonLink href={siteConfig.latestVideo.url}>Watch on YouTube</ButtonLink>
+              <ButtonLink href={siteConfig.spotifyPlaylist.url} variant="ghost">
+                Open Spotify Playlist
+              </ButtonLink>
             </div>
           </div>
         </Reveal>
