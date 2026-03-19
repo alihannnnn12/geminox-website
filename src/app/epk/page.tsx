@@ -111,14 +111,14 @@ export default function EpkPage() {
             </div>
             <div className="panel-glow p-5">
               <p className="eyebrow mb-2">Press Photos</p>
-              <ButtonLink href="/downloads/press-photos-placeholder.txt" variant="secondary">
-                Download File
+              <ButtonLink href={`mailto:${siteConfig.bookingEmail}?subject=Press%20Photos%20Request`} variant="secondary">
+                Request Photos
               </ButtonLink>
             </div>
             <div className="panel-glow p-5">
               <p className="eyebrow mb-2">Tech Rider</p>
-              <ButtonLink href="/downloads/tech-rider-placeholder.txt" variant="secondary">
-                Download File
+              <ButtonLink href={`mailto:${siteConfig.bookingEmail}?subject=Tech%20Rider%20Request`} variant="secondary">
+                Request Rider
               </ButtonLink>
             </div>
             <div className="panel-glow p-5">

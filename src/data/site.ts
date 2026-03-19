@@ -41,7 +41,7 @@ export const siteConfig = {
   name: "Geminox",
   title: "Geminox | Underground Tech House",
   description:
-    "A dark underground tech house artist website with a premium club aesthetic and easy-to-edit content files.",
+    "Geminox is a Washington DC-based underground tech house artist. Hypnotic percussion, dark low end, and late-night warehouse energy for black-room dance floors.",
   location: "Washington DC",
   bookingEmail: "bookings@geminoxbeats.com",
   genre: "Underground Tech House",

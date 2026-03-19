@@ -36,7 +36,7 @@ export function GalleryGrid({ items }: GalleryGridProps) {
             </div>
             <div className="absolute inset-x-0 bottom-0 p-4">
               <p className="text-sm uppercase tracking-[0.16em] text-cyan-200/70">
-                {item.isPlaceholder ? "Placeholder" : "Media"}
+                {"Gallery"}
               </p>
               <h3 className="mt-2 font-display text-2xl text-white">{item.title}</h3>
               <p className="mt-2 text-sm text-white/65">{item.caption}</p>
@@ -69,7 +69,7 @@ export function GalleryGrid({ items }: GalleryGridProps) {
               />
             </div>
             <div className="flex flex-col justify-end">
-              <p className="eyebrow">{activeItem.isPlaceholder ? "Replace Later" : "Gallery"}</p>
+              <p className="eyebrow">{"Gallery"}</p>
               <h3 className="font-display text-4xl text-white">{activeItem.title}</h3>
               <p className="mt-4 text-base leading-7 text-white/70">{activeItem.caption}</p>
             </div>
