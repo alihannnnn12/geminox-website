@@ -14,10 +14,6 @@ export default function TourPage() {
         eyebrow="Tour / Shows"
         title="Upcoming shows and live dates."
       >
-        <div className="panel-glow p-6">
-          <p className="eyebrow mb-2">Promoter Note</p>
-          <p className="text-base leading-8 text-white/70">{siteConfig.contact.promoterCopy}</p>
-        </div>
         <Reveal>
           <div className="mt-8">
             <ShowsPanel shows={shows} />
