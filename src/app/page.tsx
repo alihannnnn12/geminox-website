@@ -66,8 +66,8 @@ export default function HomePage() {
                     <h2 className="font-display text-4xl text-white">{siteConfig.hero.announcement.title}</h2>
                     <p className="mt-3 max-w-xl text-base leading-7 text-white/68">{siteConfig.hero.announcement.copy}</p>
                   </div>
-                  <ButtonLink href="/music" variant="secondary">
-                    View Releases
+                  <ButtonLink href={siteConfig.spotifyPlaylist.url} variant="secondary">
+                    Open Spotify
                   </ButtonLink>
                 </div>
               </div>
@@ -77,6 +77,7 @@ export default function HomePage() {
       </section>
 
       <SectionShell
+        id="listen"
         description={siteConfig.latestVideo.description}
         eyebrow="Listen"
         title="Latest video and playlist in one place."

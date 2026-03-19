@@ -81,7 +81,7 @@ export const featureFlags = content.featureFlags;
 
 const allNavigation: Array<NavItem & { enabled: boolean }> = [
   { href: "/", label: "Home", enabled: true },
-  { href: "/music", label: "Music", enabled: true },
+  { href: "/music", label: "Music", enabled: false },
   { href: "/tour", label: "Tour", enabled: true },
   { href: "/gallery", label: "Gallery", enabled: true },
   { href: "/about", label: "About", enabled: true },
