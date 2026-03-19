@@ -1,5 +1,6 @@
 "use client";
 
+import { AnimatePresence, motion } from "framer-motion";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useState } from "react";
@@ -117,55 +118,111 @@ export function SiteHeader() {
           type="button"
         >
           <span className="sr-only">Menu</span>
-          <span className="space-y-1">
-            <span className="block h-px w-5 bg-current" />
-            <span className="block h-px w-5 bg-current" />
-            <span className="block h-px w-5 bg-current" />
+          <span className="relative block h-5 w-5">
+            <span
+              className={`absolute left-0 top-1/2 block h-px w-5 -translate-y-[7px] bg-current transition duration-300 ${
+                open ? "translate-y-0 rotate-45" : ""
+              }`}
+            />
+            <span
+              className={`absolute left-0 top-1/2 block h-px w-5 bg-current transition duration-200 ${
+                open ? "opacity-0" : "opacity-100"
+              }`}
+            />
+            <span
+              className={`absolute left-0 top-1/2 block h-px w-5 translate-y-[7px] bg-current transition duration-300 ${
+                open ? "translate-y-0 -rotate-45" : ""
+              }`}
+            />
           </span>
         </button>
       </div>
-      {open ? (
-        <div className="border-t border-white/10 bg-[rgba(4,8,15,0.96)] md:hidden">
-          <nav aria-label="Mobile" className="mx-auto flex max-w-7xl flex-col px-5 py-4 sm:px-6">
-            {navigation.map((item) => (
-              <Link
-                className="border-b border-white/8 py-3 text-sm uppercase tracking-[0.18em] text-white/80"
-                href={item.href}
-                key={item.href}
-                onClick={() => setOpen(false)}
-              >
-                {item.label}
-              </Link>
-            ))}
-            <div className="mt-4 flex items-center gap-2">
-              {socialLinks.map((social) => (
-                <a
-                  aria-label={social.label}
-                  className="inline-flex h-11 w-11 items-center justify-center rounded-full border border-white/12 bg-white/[0.04] text-white/72 transition hover:border-cyan-300/45 hover:text-cyan-100"
-                  href={social.href}
-                  key={social.href}
-                  rel="noreferrer"
-                  target="_blank"
-                  title={social.label}
+      <AnimatePresence initial={false}>
+        {open ? (
+          <motion.div
+            animate={{ opacity: 1, height: "auto" }}
+            className="overflow-hidden border-t border-white/10 bg-[linear-gradient(180deg,rgba(4,8,15,0.98)_0%,rgba(4,8,15,0.92)_100%)] md:hidden"
+            exit={{ opacity: 0, height: 0 }}
+            initial={{ opacity: 0, height: 0 }}
+            transition={{ duration: 0.32, ease: [0.22, 1, 0.36, 1] }}
+          >
+            <motion.nav
+              animate="open"
+              aria-label="Mobile"
+              className="mx-auto max-w-7xl px-5 py-4 sm:px-6"
+              initial="closed"
+              variants={{
+                closed: {},
+                open: {
+                  transition: {
+                    staggerChildren: 0.05,
+                    delayChildren: 0.05
+                  }
+                }
+              }}
+            >
+              <div className="rounded-[1.75rem] border border-white/10 bg-white/[0.03] p-3 shadow-[0_24px_80px_rgba(0,0,0,0.45)]">
+                <div className="mb-3 flex items-center justify-between px-3 pt-1">
+                  <p className="text-[10px] uppercase tracking-[0.28em] text-cyan-100/60">Navigate</p>
+                  <span className="h-2 w-2 rounded-full bg-cyan-300/75 shadow-[0_0_14px_rgba(103,232,249,0.9)]" />
+                </div>
+                <div className="flex flex-col">
+                  {navigation.map((item) => (
+                    <motion.div
+                      key={item.href}
+                      variants={{
+                        closed: { opacity: 0, y: -10, filter: "blur(8px)" },
+                        open: { opacity: 1, y: 0, filter: "blur(0px)" }
+                      }}
+                    >
+                      <Link
+                        className="flex items-center justify-between border-b border-white/8 px-3 py-3.5 text-sm uppercase tracking-[0.18em] text-white/82 transition hover:text-white"
+                        href={item.href}
+                        onClick={() => setOpen(false)}
+                      >
+                        <span>{item.label}</span>
+                        <span className="text-white/30">/</span>
+                      </Link>
+                    </motion.div>
+                  ))}
+                </div>
+                <motion.div
+                  className="mt-4 flex items-center gap-2 px-3 pb-1"
+                  variants={{
+                    closed: { opacity: 0, y: 10 },
+                    open: { opacity: 1, y: 0 }
+                  }}
                 >
-                  <SocialIcon label={social.label} />
-                </a>
-              ))}
-              {emailLink ? <div className="mx-1 h-6 w-px bg-white/10" /> : null}
-              {emailLink ? (
-                <a
-                  aria-label={emailLink.label}
-                  className="inline-flex h-11 w-11 items-center justify-center rounded-full border border-white/12 bg-white/[0.04] text-white/72 transition hover:border-cyan-300/45 hover:text-cyan-100"
-                  href={emailLink.href}
-                  title={emailLink.label}
-                >
-                  <SocialIcon label={emailLink.label} />
-                </a>
-              ) : null}
-            </div>
-          </nav>
-        </div>
-      ) : null}
+                  {socialLinks.map((social) => (
+                    <a
+                      aria-label={social.label}
+                      className="inline-flex h-11 w-11 items-center justify-center rounded-full border border-white/12 bg-white/[0.04] text-white/72 transition hover:border-cyan-300/45 hover:text-cyan-100"
+                      href={social.href}
+                      key={social.href}
+                      rel="noreferrer"
+                      target="_blank"
+                      title={social.label}
+                    >
+                      <SocialIcon label={social.label} />
+                    </a>
+                  ))}
+                  {emailLink ? <div className="mx-1 h-6 w-px bg-white/10" /> : null}
+                  {emailLink ? (
+                    <a
+                      aria-label={emailLink.label}
+                      className="inline-flex h-11 w-11 items-center justify-center rounded-full border border-white/12 bg-white/[0.04] text-white/72 transition hover:border-cyan-300/45 hover:text-cyan-100"
+                      href={emailLink.href}
+                      title={emailLink.label}
+                    >
+                      <SocialIcon label={emailLink.label} />
+                    </a>
+                  ) : null}
+                </motion.div>
+              </div>
+            </motion.nav>
+          </motion.div>
+        ) : null}
+      </AnimatePresence>
     </header>
   );
 }
