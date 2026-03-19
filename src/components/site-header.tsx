@@ -72,6 +72,13 @@ function SocialIcon({ label }: { label: string }) {
           <path d="M5 10.4v5.5M6.7 9.8v6.1M3.3 11.4v4.5" stroke="currentColor" strokeLinecap="round" strokeWidth="1.6" />
         </svg>
       );
+    case "Beatport":
+      return (
+        <svg aria-hidden="true" className={shared} fill="none" viewBox="0 0 24 24">
+          <circle cx="12" cy="12" r="8.2" stroke="currentColor" strokeWidth="1.7" />
+          <path d="M10.2 8.6v7.1a2 2 0 1 1-1.4-1.9V9.8l5.4-1.2v5.7a2 2 0 1 1-1.4-1.9V7.7l-2.6.9Z" fill="currentColor" />
+        </svg>
+      );
     case "Bookings":
       return (
         <svg aria-hidden="true" className={shared} fill="none" viewBox="0 0 24 24">

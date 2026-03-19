@@ -33,6 +33,7 @@ export const socials: SocialItem[] = [
   { href: "https://open.spotify.com/artist/23sLtEwFbFysRPtji4FMCB", label: "Spotify" },
   { href: "https://music.apple.com/us/artist/geminox/1779764663", label: "Apple Music" },
   { href: "https://soundcloud.com/geminox_beats", label: "SoundCloud" },
+  { href: "https://www.beatport.com/artist/geminox/1270709", label: "Beatport" },
   { href: "mailto:bookings@geminoxbeats.com", label: "Bookings" }
 ];
 
@@ -102,7 +103,7 @@ export const siteConfig = {
       isPlaceholder: false
     },
     { label: "Apple Music", value: "https://music.apple.com/us/artist/geminox/1779764663", isPlaceholder: false },
-    { label: "Beatport", value: "Catalog link coming into focus", isPlaceholder: true },
+    { label: "Beatport", value: "https://www.beatport.com/artist/geminox/1270709", isPlaceholder: false },
     { label: "SoundCloud", value: "https://soundcloud.com/geminox_beats", isPlaceholder: false }
   ]
 } as const;

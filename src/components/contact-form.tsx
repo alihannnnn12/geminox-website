@@ -4,7 +4,6 @@ import { FormEvent, useState, useTransition } from "react";
 
 type StatusState = {
   message: string;
-  tone?: "error" | "success";
 };
 
 export function ContactForm() {
@@ -32,11 +31,8 @@ export function ContactForm() {
       });
 
       const data = (await response.json()) as { message: string };
-      setStatus({ message: data.message, tone: response.ok ? "success" : "error" });
-
-      if (response.ok) {
-        form.reset();
-      }
+      setStatus({ message: data.message });
+      form.reset();
     });
   }
 
@@ -70,7 +66,7 @@ export function ContactForm() {
         <button className="cta-primary" disabled={isPending} type="submit">
           {isPending ? "Sending..." : "Send Inquiry"}
         </button>
-        <p className={`text-sm ${status.tone === "error" ? "text-rose-200/90" : "text-cyan-100/80"}`}>{status.message}</p>
+        <p className="text-sm text-cyan-100/80">{status.message}</p>
       </div>
     </form>
   );
