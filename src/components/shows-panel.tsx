@@ -15,8 +15,7 @@ export function ShowsPanel({ shows }: ShowsPanelProps) {
           <p className="eyebrow">No live dates listed</p>
           <h3 className="font-display text-4xl text-white">New city announcements are still to come.</h3>
           <p className="mt-4 max-w-2xl text-base leading-8 text-white/68">
-            The current Geminox site does not list tour dates, so this redesign uses a strong empty state instead of inventing fake shows.
-            Join the newsletter for first access to venue updates or reach out directly for bookings.
+            Fresh city announcements are still ahead. Join the newsletter for first access to venue updates or reach out directly for bookings.
           </p>
         </div>
         <div className="flex flex-col gap-3 self-end">

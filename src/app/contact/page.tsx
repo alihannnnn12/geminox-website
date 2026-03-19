@@ -9,7 +9,7 @@ export default function ContactPage() {
   return (
     <>
       <PageHero
-        description="A club-friendly contact page with the booking email clearly visible, plus a placeholder form that works in local preview."
+        description="A club-friendly contact page with direct booking details, a clear inquiry form, and a fast path for promoters and collaborators."
         eyebrow="Contact / Bookings"
         title="A direct line for clubs, promoters, labels, and collaborators."
       >

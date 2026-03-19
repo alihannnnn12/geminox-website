@@ -21,30 +21,30 @@ export const galleryItems: GalleryItem[] = [
   },
   {
     src: "/assets/gallery/gallery-placeholder-01.svg",
-    alt: "Placeholder warehouse photography tile",
+    alt: "Warehouse portrait holding visual",
     title: "Warehouse Portrait",
-    caption: "Placeholder image. Replace with real club photography.",
+    caption: "Reserved for future club portrait photography.",
     isPlaceholder: true
   },
   {
     src: "/assets/gallery/gallery-placeholder-02.svg",
-    alt: "Placeholder crowd photography tile",
+    alt: "Crowd energy holding visual",
     title: "Crowd Moment",
-    caption: "Placeholder image. Replace with live room shots.",
+    caption: "Reserved for future crowd and room shots.",
     isPlaceholder: true
   },
   {
     src: "/assets/gallery/gallery-placeholder-03.svg",
-    alt: "Placeholder backstage photography tile",
+    alt: "Backstage detail holding visual",
     title: "Backstage Detail",
-    caption: "Placeholder image. Replace with behind-the-scenes content.",
+    caption: "Reserved for behind-the-scenes and travel details.",
     isPlaceholder: true
   },
   {
     src: "/assets/gallery/gallery-placeholder-04.svg",
-    alt: "Placeholder media asset tile",
+    alt: "Press texture holding visual",
     title: "Press Texture",
-    caption: "Placeholder image. Replace with approved press stills.",
+    caption: "Reserved for approved press stills and editorial selects.",
     isPlaceholder: true
   }
 ];

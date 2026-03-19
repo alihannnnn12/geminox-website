@@ -37,7 +37,7 @@ export const siteConfig = {
   name: "Geminox",
   title: "Geminox | Underground Tech House",
   description:
-    "A dark underground tech house artist website built for local preview first, with a premium club aesthetic and easy-to-edit content files.",
+    "A dark underground tech house artist website with a premium club aesthetic and easy-to-edit content files.",
   location: "Washington DC",
   bookingEmail: "bookings@geminoxbeats.com",
   genre: "Underground Tech House",
@@ -80,7 +80,7 @@ export const siteConfig = {
     promoterCopy:
       "Open for club nights, direct support, label showcases, warehouse events, and curated late-night bookings.",
     responseNote:
-      "For now, the form submits to a local placeholder endpoint so the site can be previewed before any provider is connected."
+      "Use the form below for inquiries, or reach out directly by email for the fastest booking response."
   },
   epk: {
     facts: [

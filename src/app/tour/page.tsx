@@ -10,7 +10,7 @@ export default function TourPage() {
   return (
     <>
       <PageHero
-        description="A polished live page with a deliberate empty state today and room for real ticket links later."
+        description="A polished live page that keeps the calendar clear, direct, and ready for future ticket links."
         eyebrow="Tour / Shows"
         title="Live dates, cleanly handled whether the calendar is packed or quiet."
       >
@@ -31,7 +31,7 @@ export default function TourPage() {
       </SectionShell>
 
       <SectionShell
-        description="Until tour data is live, the strongest CTA is a direct path to bookings and the newsletter."
+        description="When the calendar is quiet, the strongest next step is a direct path to bookings and the newsletter."
         eyebrow="Next Step"
         title="Need a direct booking line?"
       >

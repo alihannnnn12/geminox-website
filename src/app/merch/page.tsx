@@ -20,7 +20,7 @@ export default function MerchPage() {
       >
         <div className="panel-glow p-6">
           <p className="eyebrow mb-2">Status</p>
-          <p className="text-base leading-8 text-white/70">Placeholder page. Add real products, mockups, and store links later.</p>
+          <p className="text-base leading-8 text-white/70">Merch is being shaped for a future drop, with products, mockups, and store links to follow.</p>
         </div>
       </PageHero>
 

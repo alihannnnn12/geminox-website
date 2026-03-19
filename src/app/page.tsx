@@ -119,7 +119,7 @@ export default function HomePage() {
       <SectionShell
         description="The site is ready for live tour data later, but it already handles the no-dates-yet state in a deliberate way."
         eyebrow="Tour Preview"
-        title="Upcoming shows without fake placeholders."
+        title="Upcoming shows, handled with intention."
       >
         <Reveal>
           <ShowsPanel shows={shows} />
@@ -127,7 +127,7 @@ export default function HomePage() {
       </SectionShell>
 
       <SectionShell
-        description="Two real visuals are reused from the current project, and the remaining gallery tiles are styled placeholders for future press and club photography."
+        description="Two real visuals are reused from the current project, with additional gallery frames held open for future press and club photography."
         eyebrow="Gallery"
         title="Media that feels editorial, not tossed in."
       >

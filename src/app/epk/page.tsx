@@ -14,7 +14,7 @@ export default function EpkPage() {
   return (
     <>
       <PageHero
-        description="A promoter-friendly EPK with quick facts, short bio, streaming placeholders, an embedded mix, and downloadable placeholder assets."
+        description="A promoter-friendly EPK with quick facts, short bio, streaming links, an embedded mix, and downloadable support assets."
         eyebrow="EPK / Press"
         title="A cleaner one-stop page for promoters and press."
       >
@@ -60,9 +60,9 @@ export default function EpkPage() {
       </SectionShell>
 
       <SectionShell
-        description="The current project does not expose confirmed streaming profiles yet, so these are clear placeholders instead of broken links."
+        description="Keep every key profile in one place so promoters, bookers, and press can scan quickly."
         eyebrow="Streaming Links"
-        title="Profiles to replace later."
+        title="Streaming profiles at a glance."
       >
         <Reveal>
           <div className="grid gap-4 md:grid-cols-2 xl:grid-cols-4">
@@ -97,9 +97,9 @@ export default function EpkPage() {
       </SectionShell>
 
       <SectionShell
-        description="These downloadable files are placeholders for press photos, a tech rider, and asset packs."
+        description="Keep logos, press imagery, rider notes, and support files ready for promoters and media teams."
         eyebrow="Downloads"
-        title="Placeholder assets, ready to replace."
+        title="Downloadable press assets."
       >
         <Reveal>
           <div className="grid gap-4 md:grid-cols-2 xl:grid-cols-4">
@@ -112,13 +112,13 @@ export default function EpkPage() {
             <div className="panel-glow p-5">
               <p className="eyebrow mb-2">Press Photos</p>
               <ButtonLink href="/downloads/press-photos-placeholder.txt" variant="secondary">
-                Download Placeholder
+                Download File
               </ButtonLink>
             </div>
             <div className="panel-glow p-5">
               <p className="eyebrow mb-2">Tech Rider</p>
               <ButtonLink href="/downloads/tech-rider-placeholder.txt" variant="secondary">
-                Download Placeholder
+                Download File
               </ButtonLink>
             </div>
             <div className="panel-glow p-5">

@@ -8,18 +8,18 @@ export default function GalleryPage() {
   return (
     <>
       <PageHero
-        description="A media page with a gallery grid, click-to-open lightbox, and clearly flagged placeholders for future press photography."
+        description="A media page with a gallery grid, click-to-open lightbox, and a strong visual framework for current and future press photography."
         eyebrow="Gallery / Media"
         title="Visual material with a cleaner editorial frame."
       >
         <div className="panel-glow p-6">
-          <p className="eyebrow mb-2">Replacement queue</p>
-          <p className="text-base leading-8 text-white/70">The placeholder tiles are intentional and marked for swap-out later.</p>
+          <p className="eyebrow mb-2">Visual Direction</p>
+          <p className="text-base leading-8 text-white/70">The grid balances current Geminox visuals with space reserved for future press selects and live room photography.</p>
         </div>
       </PageHero>
 
       <SectionShell
-        description="Real current-project visuals are reused where available. Placeholder frames keep the page polished until more photo assets are ready."
+        description="Current project visuals are already in place, with additional frames ready for incoming portrait, crowd, and backstage assets."
         eyebrow="Media Grid"
         title="Press stills, live energy, and future club photography."
       >

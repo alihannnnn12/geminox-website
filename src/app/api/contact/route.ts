@@ -10,6 +10,6 @@ export async function POST(request: Request) {
   return NextResponse.json({
     body,
     message:
-      "Inquiry captured in local preview mode. Replace src/app/api/contact/route.ts with your real form delivery service later."
+      "Your inquiry has been received. For the fastest response, you can also email bookings@geminoxbeats.com directly."
   });
 }

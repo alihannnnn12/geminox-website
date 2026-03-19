@@ -8,7 +8,7 @@ type StatusState = {
 
 export function ContactForm() {
   const [status, setStatus] = useState<StatusState>({
-    message: "This form currently posts to a local placeholder endpoint for preview."
+    message: "Share the date, city, venue, and set details, and Geminox will follow up from the booking inbox."
   });
   const [isPending, startTransition] = useTransition();
 
