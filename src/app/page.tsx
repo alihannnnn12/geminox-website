@@ -158,14 +158,16 @@ export default function HomePage() {
         </div>
       </section>
 
-      <SectionShell
-        eyebrow="Gallery"
-        title="Visuals with more atmosphere, pressure, and intent."
-      >
-        <Reveal>
-          <GalleryGrid items={galleryItems.slice(0, 4)} />
-        </Reveal>
-      </SectionShell>
+      <section className="section-wrap">
+        <div className="mx-auto max-w-7xl px-5 sm:px-6 lg:px-8">
+          <div className="mb-10 max-w-3xl">
+            <p className="eyebrow">Gallery</p>
+          </div>
+          <Reveal>
+            <GalleryGrid items={galleryItems.slice(0, 4)} />
+          </Reveal>
+        </div>
+      </section>
 
       <SectionShell
         description="A darker artist statement built around control, restraint, and after-hours tension."
