@@ -13,7 +13,9 @@ export default function TourPage() {
         description="Upcoming Geminox appearances — club nights, warehouse events, and support slots across the circuit."
         belowContent={
           <Reveal>
-            <ShowsPanel shows={shows} />
+            <div className="max-w-[46rem]">
+              <ShowsPanel shows={shows} />
+            </div>
           </Reveal>
         }
         eyebrow="Tour / Shows"
