@@ -159,8 +159,8 @@ export function SiteHeader() {
           <span className="sr-only">Menu</span>
           <span className="relative block h-5 w-5">
             <span
-              className={`absolute left-1/2 top-[5px] block h-px w-4 -translate-x-1/2 rounded-full bg-current transition-all duration-300 ease-[cubic-bezier(0.22,1,0.36,1)] ${
-                open ? "top-1/2 -translate-y-1/2 rotate-45" : ""
+              className={`absolute left-1/2 block h-px w-4 -translate-x-1/2 rounded-full bg-current transition-all duration-300 ease-[cubic-bezier(0.22,1,0.36,1)] ${
+                open ? "top-1/2 -translate-y-1/2 rotate-45" : "top-[5px]"
               }`}
             />
             <span
@@ -169,8 +169,8 @@ export function SiteHeader() {
               }`}
             />
             <span
-              className={`absolute bottom-[5px] left-1/2 block h-px w-4 -translate-x-1/2 rounded-full bg-current transition-all duration-300 ease-[cubic-bezier(0.22,1,0.36,1)] ${
-                open ? "bottom-auto top-1/2 -translate-y-1/2 -rotate-45" : ""
+              className={`absolute left-1/2 block h-px w-4 -translate-x-1/2 rounded-full bg-current transition-all duration-300 ease-[cubic-bezier(0.22,1,0.36,1)] ${
+                open ? "top-1/2 -translate-y-1/2 -rotate-45" : "bottom-[5px]"
               }`}
             />
           </span>
