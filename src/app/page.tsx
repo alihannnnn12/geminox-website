@@ -162,6 +162,7 @@ export default function HomePage() {
         <div className="mx-auto max-w-7xl px-5 sm:px-6 lg:px-8">
           <div className="mb-10 max-w-3xl">
             <p className="eyebrow">Gallery</p>
+            <p className="section-copy mt-4">Still frames, live moments, and the darker visual side of the Geminox world.</p>
           </div>
           <Reveal>
             <GalleryGrid items={galleryItems.slice(0, 4)} />
