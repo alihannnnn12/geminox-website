@@ -120,17 +120,17 @@ export function SiteHeader() {
           <span className="sr-only">Menu</span>
           <span className="relative block h-5 w-5">
             <span
-              className={`absolute left-1/2 top-1/2 block h-px w-4 -translate-x-1/2 -translate-y-[5px] bg-current transition-transform duration-200 ease-out ${
+              className={`absolute left-1/2 top-1/2 block h-1 w-5 -translate-x-1/2 -translate-y-[7px] rounded-full bg-current transition-[transform,width] duration-300 ease-[cubic-bezier(0.22,1,0.36,1)] ${
                 open ? "translate-y-0 rotate-45" : ""
               }`}
             />
             <span
-              className={`absolute left-1/2 top-1/2 block h-px w-4 -translate-x-1/2 bg-current transition-opacity duration-150 ${
-                open ? "opacity-0" : "opacity-100"
+              className={`absolute left-1/2 top-1/2 block h-1 w-5 -translate-x-1/2 rounded-full bg-current transition-all duration-200 ease-out ${
+                open ? "w-0 opacity-0" : "opacity-100"
               }`}
             />
             <span
-              className={`absolute left-1/2 top-1/2 block h-px w-4 -translate-x-1/2 translate-y-[5px] bg-current transition-transform duration-200 ease-out ${
+              className={`absolute left-1/2 top-1/2 block h-1 w-5 -translate-x-1/2 translate-y-[7px] rounded-full bg-current transition-[transform,width] duration-300 ease-[cubic-bezier(0.22,1,0.36,1)] ${
                 open ? "translate-y-0 -rotate-45" : ""
               }`}
             />
