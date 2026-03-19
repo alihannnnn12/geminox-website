@@ -158,7 +158,6 @@ export default function HomePage() {
       </section>
 
       <SectionShell
-        description="A visual lane built from dark-room stills, live moments, and the sharper side of the Geminox world."
         eyebrow="Gallery"
         title="Visuals with more atmosphere, pressure, and intent."
       >
