@@ -5,13 +5,15 @@ type PageHeroProps = {
   title: string;
   description: string;
   children?: ReactNode;
+  belowContent?: ReactNode;
 };
 
 export function PageHero({
   eyebrow,
   title,
   description,
-  children
+  children,
+  belowContent
 }: PageHeroProps) {
   return (
     <section className="relative overflow-hidden border-b border-white/10 pt-28">
@@ -22,6 +24,7 @@ export function PageHero({
           <div className="max-w-4xl">
             <h1 className="hero-title max-w-4xl text-balance">{title}</h1>
             <p className="section-copy mt-6 max-w-2xl text-lg">{description}</p>
+            {belowContent ? <div className="mt-8">{belowContent}</div> : null}
           </div>
           {children ? <div>{children}</div> : null}
         </div>

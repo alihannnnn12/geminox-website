@@ -11,15 +11,14 @@ export default function TourPage() {
     <>
       <PageHero
         description="Upcoming Geminox appearances — club nights, warehouse events, and support slots across the circuit."
+        belowContent={
+          <Reveal>
+            <ShowsPanel shows={shows} />
+          </Reveal>
+        }
         eyebrow="Tour / Shows"
         title="Upcoming shows and live dates."
-      >
-        <Reveal>
-          <div className="mt-8">
-            <ShowsPanel shows={shows} />
-          </div>
-        </Reveal>
-      </PageHero>
+      />
 
       <SectionShell
         eyebrow="Next Step"
