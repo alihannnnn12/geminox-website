@@ -2,6 +2,7 @@ import Image from "next/image";
 
 import { ButtonLink } from "@/components/button-link";
 import { GalleryGrid } from "@/components/gallery-grid";
+import { ListenDropdown } from "@/components/listen-dropdown";
 import { NewsletterForm } from "@/components/newsletter-form";
 import { Reveal } from "@/components/reveal";
 import { SectionShell } from "@/components/section-shell";
@@ -11,6 +12,21 @@ import { shows } from "@/data/shows";
 import { siteConfig, socials } from "@/data/site";
 
 export default function HomePage() {
+  const listenServices = [
+    ...siteConfig.streamingProfiles
+      .filter((profile) => !profile.isPlaceholder)
+      .map((profile) => ({
+        href: profile.value,
+        label: profile.label,
+        note: profile.label === "Spotify" ? "Artist page" : "Open profile"
+      })),
+    {
+      href: siteConfig.latestVideo.url,
+      label: "YouTube",
+      note: "Latest video"
+    }
+  ];
+
   return (
     <>
       <section className="relative overflow-hidden border-b border-white/10 pt-28">
@@ -22,7 +38,7 @@ export default function HomePage() {
               <h1 className="hero-title max-w-4xl text-balance">{siteConfig.hero.title}</h1>
               <p className="section-copy mt-6 max-w-2xl text-lg">{siteConfig.hero.description}</p>
               <div className="mt-8 flex flex-wrap gap-3">
-                <ButtonLink href={siteConfig.hero.primaryCta.href}>{siteConfig.hero.primaryCta.label}</ButtonLink>
+                <ListenDropdown buttonLabel={siteConfig.hero.primaryCta.label} items={listenServices} />
                 <ButtonLink href={siteConfig.hero.secondaryCta.href} variant="secondary">
                   {siteConfig.hero.secondaryCta.label}
                 </ButtonLink>
