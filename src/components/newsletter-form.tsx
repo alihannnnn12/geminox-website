@@ -3,7 +3,7 @@
 import { FormEvent, useState, useTransition } from "react";
 
 type FormStatus = {
-  tone: "idle" | "success";
+  tone: "idle" | "success" | "error";
   message: string;
 };
 
@@ -21,17 +21,30 @@ export function NewsletterForm() {
     const email = String(formData.get("email") ?? "");
 
     startTransition(async () => {
-      const response = await fetch("/api/newsletter", {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json"
-        },
-        body: JSON.stringify({ email })
-      });
+      try {
+        const response = await fetch("/api/newsletter", {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json"
+          },
+          body: JSON.stringify({ email })
+        });
 
-      const data = (await response.json()) as { message: string };
-      setStatus({ tone: "success", message: data.message });
-      form.reset();
+        const data = (await response.json()) as { message: string };
+
+        if (!response.ok) {
+          setStatus({ tone: "error", message: data.message });
+          return;
+        }
+
+        setStatus({ tone: "success", message: data.message });
+        form.reset();
+      } catch {
+        setStatus({
+          tone: "error",
+          message: "The signup request failed. Try again in a moment."
+        });
+      }
     });
   }
 
@@ -55,7 +68,9 @@ export function NewsletterForm() {
           {isPending ? "Saving..." : "Join Newsletter"}
         </button>
       </div>
-      <p className="sm:col-span-2 text-sm text-cyan-100/80">{status.message}</p>
+      <p className={`sm:col-span-2 text-sm ${status.tone === "error" ? "text-rose-200/90" : "text-cyan-100/80"}`}>
+        {status.message}
+      </p>
     </form>
   );
 }

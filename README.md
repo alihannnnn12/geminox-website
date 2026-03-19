@@ -129,9 +129,26 @@ Pulled from the current Geminox site:
 
 ## Environment Variables
 
-No environment variables are required right now.
+Newsletter signup now supports Kit.
 
-That keeps local setup simple for review.
+Create a local env file:
+
+```bash
+cp .env.example .env.local
+```
+
+Add these values to `.env.local`:
+
+```text
+KIT_API_KEY=your_kit_api_key
+KIT_FORM_ID=your_kit_form_id
+```
+
+Current provider setup:
+
+- Newsletter provider: `Kit`
+- Newsletter route: `src/app/api/newsletter/route.ts`
+- Newsletter form component: `src/components/newsletter-form.tsx`
 
 ## Common Troubleshooting
 
@@ -157,6 +174,17 @@ Run:
 npm run test:e2e:install
 ```
 
+### Newsletter says it is not configured
+
+Make sure `.env.local` exists and contains:
+
+```text
+KIT_API_KEY=...
+KIT_FORM_ID=...
+```
+
+Then restart `npm run dev`.
+
 ### Fonts or embeds load slowly on first run
 
 The first local run may take a little longer because Next.js prepares the app and fetches font assets.
@@ -165,7 +193,7 @@ The first local run may take a little longer because Next.js prepares the app an
 
 - This project is ready for local review first.
 - When you are happy with the content and visuals, we can add IONOS deployment steps next.
-- Before deployment, replace placeholder assets and connect the newsletter/contact endpoints to real services.
+- Before deployment, replace placeholder assets and connect any remaining placeholder contact endpoint logic to real services.
 
 ## GitHub -> Vercel -> IONOS
 
@@ -206,7 +234,12 @@ In Vercel:
 
 After that, each push to `main` should create a production deployment automatically.
 
-No environment variables are required for this version of the site.
+Environment variables required for newsletter signup:
+
+```text
+KIT_API_KEY=...
+KIT_FORM_ID=...
+```
 
 ### 3. Add your domain in Vercel
 
