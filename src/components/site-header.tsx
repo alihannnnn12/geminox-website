@@ -72,13 +72,9 @@ function SocialIcon({ label }: { label: string }) {
     case "Beatport":
       return (
         <svg aria-hidden="true" className={shared} fill="none" viewBox="0 0 24 24">
-          <circle cx="12" cy="13.25" fill="currentColor" r="2.1" />
-          <path d="M7.7 12.9a4.3 4.3 0 1 1 8.6 0" stroke="currentColor" strokeLinecap="round" strokeWidth="1.6" />
           <path
-            d="M7.55 12.95c0-.53.43-.95.95-.95h.85v3.95H8.5a.95.95 0 0 1-.95-.95v-2.05Zm6.8-.95h.85c.52 0 .95.42.95.95V15a.95.95 0 0 1-.95.95h-.85V12Z"
-            stroke="currentColor"
-            strokeLinejoin="round"
-            strokeWidth="1.6"
+            d="M9.2 5.2v6.35a1.65 1.65 0 1 1-1.15-1.58V6.35l5.05-1.15v4.35a2.9 2.9 0 1 1-1.45 0V7.02L9.2 7.58Z"
+            fill="currentColor"
           />
         </svg>
       );
