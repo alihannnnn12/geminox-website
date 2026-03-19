@@ -118,10 +118,22 @@ export function SiteHeader() {
           type="button"
         >
           <span className="sr-only">Menu</span>
-          <span className="space-y-1">
-            <span className="block h-px w-5 bg-current" />
-            <span className="block h-px w-5 bg-current" />
-            <span className="block h-px w-5 bg-current" />
+          <span className="relative block h-5 w-5">
+            <span
+              className={`absolute left-1/2 top-1/2 block h-px w-4 -translate-x-1/2 -translate-y-[5px] bg-current transition-transform duration-200 ease-out ${
+                open ? "translate-y-0 rotate-45" : ""
+              }`}
+            />
+            <span
+              className={`absolute left-1/2 top-1/2 block h-px w-4 -translate-x-1/2 bg-current transition-opacity duration-150 ${
+                open ? "opacity-0" : "opacity-100"
+              }`}
+            />
+            <span
+              className={`absolute left-1/2 top-1/2 block h-px w-4 -translate-x-1/2 translate-y-[5px] bg-current transition-transform duration-200 ease-out ${
+                open ? "translate-y-0 -rotate-45" : ""
+              }`}
+            />
           </span>
         </button>
       </div>
