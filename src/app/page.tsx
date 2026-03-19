@@ -113,11 +113,13 @@ export default function HomePage() {
         </Reveal>
       </SectionShell>
 
-      <SectionShell>
-        <Reveal>
-          <ShowsPanel shows={shows} />
-        </Reveal>
-      </SectionShell>
+      <section className="section-wrap">
+        <div className="mx-auto max-w-7xl px-5 sm:px-6 lg:px-8">
+          <Reveal>
+            <ShowsPanel shows={shows} />
+          </Reveal>
+        </div>
+      </section>
 
       <SectionShell
         description="A tighter visual edit built around live energy, branded stills, and an editorial rhythm."
