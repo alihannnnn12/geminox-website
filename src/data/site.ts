@@ -66,7 +66,7 @@ export const siteConfig = {
   newsletter: {
     providerLabel: "Kit",
     integrationNote:
-      "Newsletter signups post to Kit through src/app/api/newsletter/route.ts using KIT_API_KEY and KIT_FORM_ID."
+      "Join the Geminox list for release alerts, mix drops, show announcements, and late-night updates."
   },
   soundcloud: {
     profileUrl: "https://soundcloud.com/geminox_beats",

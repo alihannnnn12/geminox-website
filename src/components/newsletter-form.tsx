@@ -10,7 +10,7 @@ type FormStatus = {
 export function NewsletterForm() {
   const [status, setStatus] = useState<FormStatus>({
     tone: "idle",
-    message: "Newsletter integration placeholder. This is ready to connect later."
+    message: "No spam. Just new music, select show updates, and the strongest Geminox signals."
   });
   const [isPending, startTransition] = useTransition();
 

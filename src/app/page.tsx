@@ -183,7 +183,7 @@ export default function HomePage() {
       </SectionShell>
 
       <SectionShell
-        description={`Currently wired to a local placeholder endpoint. ${siteConfig.newsletter.integrationNote}`}
+        description={siteConfig.newsletter.integrationNote}
         eyebrow="Newsletter"
         title="Capture listeners before they disappear into the scroll."
       >
