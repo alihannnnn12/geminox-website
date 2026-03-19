@@ -18,17 +18,12 @@ export default function TourPage() {
           <p className="eyebrow mb-2">Promoter Note</p>
           <p className="text-base leading-8 text-white/70">{siteConfig.contact.promoterCopy}</p>
         </div>
-      </PageHero>
-
-      <SectionShell
-        description="Every confirmed appearance — city, venue, and tickets in one place."
-        eyebrow="Show Feed"
-        title="Confirmed dates."
-      >
         <Reveal>
-          <ShowsPanel shows={shows} />
+          <div className="mt-8">
+            <ShowsPanel shows={shows} />
+          </div>
         </Reveal>
-      </SectionShell>
+      </PageHero>
 
       <SectionShell
         eyebrow="Next Step"
